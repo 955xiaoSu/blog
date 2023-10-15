@@ -1,2 +1,0 @@
-# Cumulative Reasoning
-
