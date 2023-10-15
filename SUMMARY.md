@@ -1,9 +1,18 @@
 # Table of contents
 
-* [Page](README.md)
-* [Page 2](page-2.md)
+* [About me](README.md)
 
-## 论文阅读
+## Technology
 
-* [Cumulative Reasoning](lun-wen-yue-du/cumulative-reasoning/README.md)
-  * [姚期指](lun-wen-yue-du/cumulative-reasoning/yao-qi-zhi.md)
+* [Beacon 实验](technology/beacon-shi-yan.md)
+
+## Life
+
+* [支教](life/zhi-jiao.md)
+
+## Paper reading
+
+* [Fuzzing](paper-reading/fuzzing/README.md)
+  * [SelectFuzz](paper-reading/fuzzing/selectfuzz.md)
+* [Others](paper-reading/others/README.md)
+  * [Cumulative Reasoning With Language Model](paper-reading/others/cumulative-reasoning-with-language-model.md)
