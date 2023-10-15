@@ -1,3 +1,22 @@
+---
+cover: .gitbook/assets/微信图片_20231016002747.jpg
+coverY: 0
+layout:
+  cover:
+    visible: true
+    size: full
+  title:
+    visible: false
+  description:
+    visible: false
+  tableOfContents:
+    visible: true
+  outline:
+    visible: true
+  pagination:
+    visible: true
+---
+
 # About me
 
 **Hi there,**
@@ -14,7 +33,7 @@
 
 * 技术记录
 * 生活感悟
-* 阅文笔记
+* 论文笔记
 
 
 

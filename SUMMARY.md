@@ -1,6 +1,8 @@
 # Table of contents
 
 * [About me](README.md)
+* [Weekly](weekly.md)
+* [Friends](friends.md)
 
 ## Technology
 
@@ -18,8 +20,3 @@
   * [SelectFuzz](lun-wen-yue-du/cumulative-reasoning/yao-qi-zhi.md)
 * [Others](paper-reading/others/README.md)
   * [Cumulative Reasoning With Language Model](paper-reading/others/cumulative-reasoning-with-language-model.md)
-
-***
-
-* [Weekly](weekly.md)
-* [Friends](friends.md)
