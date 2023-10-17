@@ -18,6 +18,7 @@
 ## Paper reading
 
 * [Fuzzing](lun-wen-yue-du/cumulative-reasoning/README.md)
+  * [PDIFF](paper-reading/fuzzing/pdiff.md)
   * [SelectFuzz](lun-wen-yue-du/cumulative-reasoning/yao-qi-zhi.md)
 * [Others](paper-reading/others/README.md)
   * [Cumulative Reasoning With Language Model](paper-reading/others/cumulative-reasoning-with-language-model.md)
