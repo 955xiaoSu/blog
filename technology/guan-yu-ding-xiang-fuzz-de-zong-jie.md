@@ -103,18 +103,3 @@
 2. seed selection;
 3. scenario solution;
 4. project optimization.
-
-***
-
-* 协议： [Creative Commons BY-SA 4.0](http://creativecommons.org/licenses/by-sa/4.0/)
-* 分类：
-
-***
-
-### 添加新评论 <a href="#response" id="response"></a>
-
-登录身份： [admin](https://bkcat.cn/admin/profile.php) | [退出 »](https://bkcat.cn/index.php/action/logout?\_=55255f9a79a6b5e896ea982e00542374)
-
-Submit[ 闽公网安备35012502000145号 ](http://www.beian.gov.cn/portal/registerSystemInfo?recordcode=35012502000145)|[闽ICP备2023000552号-1](https://beian.miit.gov.cn/)
-
-Copyright © 2022-2023 [bkcat.cn](https://bkcat.cn/). All Rights Reserved.
