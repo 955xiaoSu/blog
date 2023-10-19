@@ -32,7 +32,7 @@
 
 ### 初体验
 
-创建一个 .py 文件（以 call.py 为例），示例代码如下。笔者为方便起见将 `python3 call.py` 该 shell 命令封装成了 call 二进制可执行程序，放入 `/usr/local/sbin/` 路径下。读者在 terminal 中键入`python3 call.py` 即可。
+创建一个 .py 文件（以 call.py 为例），示例代码如下。在 terminal 中键入`python3 call.py` 即可。
 
 ```python
 # call.py
@@ -40,7 +40,8 @@
 import os
 import openai
 
-openai.api_key = os.getenv("OPENAI_API_KEY")
+openai.api_key = os.getenv("OPENAI_API_KEY") # 在环境变量中配置 OPENAI_API_KEY=key
+                                             # 将 key 替换成在 openai 中获取到的实际值
 
 def send_message(message):
     response = openai.ChatCompletion.create(
@@ -64,14 +65,22 @@ def send_message(message):
 previous_messages = []
 
 while True:
-    user_input = input("User: ")
+    print("User: \n---------------")
+
+    user_input = ""
+    for line in iter(input, ''): # 为解决多行输入的问题，读者需要在确认输入时
+                                 # 多按一次 Enter
+        user_input += line + "   "
+    
     assistant_response = send_message(user_input)
-
-
     assistant_response_lines = assistant_response.split('\n')
-    formatted_response = "\n".join(["       " + line for line in assistant_response_lines])
 
-    print("GPT-4: \n", formatted_response, "\n\n")
+    print("---------------\nGPT-4: \n")
+
+    for line in assistant_response_lines:
+        print(line)
+    
+    print("---------------\n\n")
 ```
 
 由于时间关系，笔者仅仅体验了 gpt-4 在数学推理方面的能力，结果非常的 **amazing**！不仅能够解出一元一次方程、一元二次方程、二元一次方程组，甚至能够求解定积分与不定积分！（ps：sinx/x 的不定积分不能用初等函数表示，但 gpt-4 依旧给出了正确的解！）
