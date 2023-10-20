@@ -6,10 +6,13 @@
 
 ## Technology
 
+* [GPT-4 初体验](technology/gpt4-chu-ti-yan.md)
+* [对 AI 的认知](technology/dui-ai-de-ren-zhi.md)
 * [关于定向 fuzz 的总结](technology/guan-yu-ding-xiang-fuzz-de-zong-jie.md)
 * [Beacon 实验](technology/beacon-shi-yan.md)
-* [对 AI 的认知](technology/dui-ai-de-ren-zhi.md)
-* [GPT-4 初体验](technology/gpt4-chu-ti-yan.md)
+* [对 UNIX 新的认识](technology/dui-unix-xin-de-ren-shi.md)
+* [开源与黑客](technology/kai-yuan-yu-hei-ke.md)
+* [Great works are connected](technology/great-works-are-connected.md)
 
 ## Life
 
