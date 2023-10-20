@@ -22,3 +22,4 @@
   * [SelectFuzz](lun-wen-yue-du/cumulative-reasoning/yao-qi-zhi.md)
 * [Others](paper-reading/others/README.md)
   * [Cumulative Reasoning With Language Model](paper-reading/others/cumulative-reasoning-with-language-model.md)
+  * [A Review of the F-Measure: Its History, Properties, Criticism, and Alternatives](paper-reading/others/a-review-of-the-f-measure-its-history-properties-criticism-and-alternatives.md)
