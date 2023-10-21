@@ -6,16 +6,17 @@
 
 ## Technology
 
-* [搭建个人网站](technology/da-jian-ge-ren-wang-zhan.md)
 * [GPT-4 初体验](technology/gpt4-chu-ti-yan.md)
 * [对 AI 的认知](technology/dui-ai-de-ren-zhi.md)
 * [关于定向 fuzz 的总结](technology/guan-yu-ding-xiang-fuzz-de-zong-jie.md)
 * [Beacon 实验](technology/beacon-shi-yan.md)
+* [Python 爬虫入门学习](technology/python-pa-chong-ru-men-xue-xi.md)
+* [可视化入门学习](technology/ke-shi-hua-ru-men-xue-xi.md)
+* [CSAPP —— lab1 datalab](technology/csapp-lab1-datalab.md)
+* [搭建个人网站](technology/da-jian-ge-ren-wang-zhan.md)
 * [对 UNIX 新的认识](technology/dui-unix-xin-de-ren-shi.md)
 * [开源与黑客](technology/kai-yuan-yu-hei-ke.md)
 * [Great works are connected](technology/great-works-are-connected.md)
-* [Python 爬虫入门学习](technology/python-pa-chong-ru-men-xue-xi.md)
-* [可视化入门学习](technology/ke-shi-hua-ru-men-xue-xi.md)
 
 ## Life
 
@@ -28,6 +29,9 @@
 * [随想](life/sui-xiang.md)
 * [A passion for difficultand novel problems](life/a-passion-for-difficultand-novel-problems.md)
 * [1.21 大年三十](life/1.21-da-nian-san-shi.md)
+* [2022，我的年度总结](life/2022-wo-de-nian-du-zong-jie.md)
+* [1.20 打工日记](life/1.20-da-gong-ri-ji.md)
+* [The review of The Grand Hotel](life/the-review-of-the-grand-hotel.md)
 
 ## Paper reading
 
