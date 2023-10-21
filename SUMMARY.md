@@ -6,6 +6,7 @@
 
 ## Technology
 
+* [搭建个人网站](technology/da-jian-ge-ren-wang-zhan.md)
 * [GPT-4 初体验](technology/gpt4-chu-ti-yan.md)
 * [对 AI 的认知](technology/dui-ai-de-ren-zhi.md)
 * [关于定向 fuzz 的总结](technology/guan-yu-ding-xiang-fuzz-de-zong-jie.md)
@@ -13,10 +14,20 @@
 * [对 UNIX 新的认识](technology/dui-unix-xin-de-ren-shi.md)
 * [开源与黑客](technology/kai-yuan-yu-hei-ke.md)
 * [Great works are connected](technology/great-works-are-connected.md)
+* [Python 爬虫入门学习](technology/python-pa-chong-ru-men-xue-xi.md)
+* [可视化入门学习](technology/ke-shi-hua-ru-men-xue-xi.md)
 
 ## Life
 
+* [悟已往之不谏 知来者之可追](life/wu-yi-wang-zhi-bu-jian-zhi-lai-zhe-zhi-ke-zhui.md)
+* [在自训队，是一种什么样的体验](life/zai-zi-xun-dui-shi-yi-zhong-shi-mo-yang-de-ti-yan.md)
+* [暑假感想](life/shu-jia-gan-xiang.md)
+* [浪漫的中国酒文化](life/lang-man-de-zhong-guo-jiu-wen-hua.md)
+* [我的哲学批判](life/wo-de-zhe-xue-pi-pan.md)
 * [支教](life/zhi-jiao.md)
+* [随想](life/sui-xiang.md)
+* [A passion for difficultand novel problems](life/a-passion-for-difficultand-novel-problems.md)
+* [1.21 大年三十](life/1.21-da-nian-san-shi.md)
 
 ## Paper reading
 
