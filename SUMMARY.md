@@ -22,16 +22,16 @@
 
 * [悟已往之不谏 知来者之可追](life/wu-yi-wang-zhi-bu-jian-zhi-lai-zhe-zhi-ke-zhui.md)
 * [在自训队，是一种什么样的体验](life/zai-zi-xun-dui-shi-yi-zhong-shi-mo-yang-de-ti-yan.md)
-* [暑假感想](life/shu-jia-gan-xiang.md)
+* [支教](life/zhi-jiao.md)
+* [A passion for difficultand novel problems](life/a-passion-for-difficultand-novel-problems.md)
+* [2022，我的年度总结](life/2022-wo-de-nian-du-zong-jie.md)
+* [1.21 大年三十](life/1.21-da-nian-san-shi.md)
+* [1.20 打工日记](life/1.20-da-gong-ri-ji.md)
 * [浪漫的中国酒文化](life/lang-man-de-zhong-guo-jiu-wen-hua.md)
 * [我的哲学批判](life/wo-de-zhe-xue-pi-pan.md)
-* [支教](life/zhi-jiao.md)
-* [随想](life/sui-xiang.md)
-* [A passion for difficultand novel problems](life/a-passion-for-difficultand-novel-problems.md)
-* [1.21 大年三十](life/1.21-da-nian-san-shi.md)
-* [2022，我的年度总结](life/2022-wo-de-nian-du-zong-jie.md)
-* [1.20 打工日记](life/1.20-da-gong-ri-ji.md)
 * [The review of The Grand Hotel](life/the-review-of-the-grand-hotel.md)
+* [暑假感想](life/shu-jia-gan-xiang.md)
+* [随想](life/sui-xiang.md)
 
 ## Paper reading
 

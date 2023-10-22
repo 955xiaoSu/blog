@@ -1,14 +1,14 @@
 # 关于定向 fuzz 的总结
 
-#### 前言
+### 前言
 
 笔者在之前的学习中接触过 beacon，利用其跑了一些实验，但是并不明白其原理。如今通过阅读了同类的 5 篇论文，对定向 fuzz 有了一些初步的认知，特此做一些总结。
 
-#### Hawkeye: Towards a Desired Directed Grey-box Fuzzer (2018)
+### Hawkeye: Towards a Desired Directed Grey-box Fuzzer (2018)
 
 **workflow**
 
-[![2023-08-06T13:22:13.png](https://bkcat.cn/usr/uploads/2023/08/3088250174.png)](https://bkcat.cn/usr/uploads/2023/08/3088250174.png)
+<figure><img src="../.gitbook/assets/c1a2b54da6e431e01ff4d5a77feb709.jpg" alt=""><figcaption></figcaption></figure>
 
 **思路**
 
@@ -20,11 +20,11 @@
 
 ***
 
-#### ParmeSan:Sanitizer-guided Greybox Fuzzing (2020)
+### ParmeSan:Sanitizer-guided Greybox Fuzzing (2020)
 
 **workflow**
 
-[![2023-08-06T12:43:36.png](https://bkcat.cn/usr/uploads/2023/08/3040023591.png)](https://bkcat.cn/usr/uploads/2023/08/3040023591.png)
+<figure><img src="../.gitbook/assets/1e51d2d2e526bfc3d9369f8261f8caa.jpg" alt=""><figcaption></figcaption></figure>
 
 **思路**
 
@@ -37,11 +37,11 @@
 
 ***
 
-#### Constraint-guided Directed Greybox Fuzzing (2021)
+### Constraint-guided Directed Greybox Fuzzing (2021)
 
 **workflow**
 
-[![2023-08-06T12:57:07.png](https://bkcat.cn/usr/uploads/2023/08/3606483218.png)](https://bkcat.cn/usr/uploads/2023/08/3606483218.png)
+<figure><img src="../.gitbook/assets/1a02fef680f5568b5c73bef39343cb6.jpg" alt=""><figcaption></figcaption></figure>
 
 **思路**
 
@@ -53,11 +53,11 @@
 
 ***
 
-#### Beacon: Directed Grey-Box Fuzzing with Provable Path Pruning (2022)
+### Beacon: Directed Grey-Box Fuzzing with Provable Path Pruning (2022)
 
 **workflow**
 
-[![2023-08-06T12:39:19.png](https://bkcat.cn/usr/uploads/2023/08/3966429937.png)](https://bkcat.cn/usr/uploads/2023/08/3966429937.png)
+<figure><img src="../.gitbook/assets/655dde9782d04ec8a998673e45cfdb8.jpg" alt=""><figcaption></figcaption></figure>
 
 **思路**
 
@@ -74,7 +74,7 @@
 
 **workflow**
 
-[![2023-08-06T13:35:15.png](https://bkcat.cn/usr/uploads/2023/08/1099825551.png)](https://bkcat.cn/usr/uploads/2023/08/1099825551.png)
+<figure><img src="../.gitbook/assets/792695dc3093039e9c5bfad40c6f602.jpg" alt=""><figcaption></figcaption></figure>
 
 **思路**
 

@@ -1,5 +1,7 @@
 # 支教
 
+<figure><img src="../.gitbook/assets/be152db4a980446ad94c1b9ea0dfc8d.jpg" alt=""><figcaption></figcaption></figure>
+
 支教结束，返程。
 
 一群人因为支教相聚，如今支教结束了，这群人的故事也要暂告一段落了。本次支教是我参与过人数最多的 teamwork 了，很幸运团队化学反应非常好，所以这十五天的支教生活总体上过得很是舒心。
@@ -29,3 +31,5 @@
 竹巷的故事就这么平淡地结束了。希望这半个月的陪伴，给孩子们带去了一份温暖，能为他们的成长轻轻推开那么一扇窗。
 
 就这样吧，云边的竹小巷，后会有期！
+
+<figure><img src="../.gitbook/assets/image (11).png" alt=""><figcaption></figcaption></figure>

@@ -1,25 +1,28 @@
 # Beacon 实验
 
-#### 前言
+### 前言
 
-Beacon 实验是指将目标软件编译成 .bc 文件后再喂给 fuzzer 的过程。基础知识主要涉及到 Beacon & LLVM。bitcode 是 LLVM IR 的二进制编码（IR 是前后端的一种中间层），主要包括 bitstream container format 和 encoding LLVM IR，前者是为后者如何进行编码提供帮助的。bitstream 和 LLVM IR 有各自的格式，用不同的参数去刻画文件，在过程中可通过 Abbreviations ID 来大致理解目前的文件流。\
+Beacon 实验是指将目标软件编译成 .bc 文件后再喂给 fuzzer 的过程。基础知识主要涉及到 Beacon & LLVM。bitcode 是 LLVM IR 的二进制编码（IR 是前后端的一种中间层），主要包括 bitstream container format 和 encoding LLVM IR，前者是为后者如何进行编码提供帮助的。bitstream 和 LLVM IR 有各自的格式，用不同的参数去刻画文件，在过程中可通过 Abbreviations ID 来大致理解目前的文件流。
+
+\
 本实验是针对 [Beacon](https://qingkaishi.github.io/public\_pdfs/SP22.pdf) 论文中提到的 51 个 CVE 进行复现，测量其性能，并与自身 fuzzer 进行对比。\
-参考文档：[LLVM](https://llvm.org/docs/BitCodeFormat.html#llvm-ir-encoding) / [Beacon document](https://outstanding-hydrogen-2d1.notion.site/Beacon-documentation-8480ed4e7fff452a989f7e77ce749951)
+参考文档：[LLVM](https://llvm.org/docs/BitCodeFormat.html#llvm-ir-encoding) & [Beacon document](https://outstanding-hydrogen-2d1.notion.site/Beacon-documentation-8480ed4e7fff452a989f7e77ce749951)
 
-#### 实验过程
+### 实验过程
 
 以下按流水线的方式，记录自己踩过的坑以及对应的 solution。
 
-**环境配置**
+#### **环境配置**
 
 1. 首先配置一个密钥，放在 authorized\_keys 下，然后配置 config，实现优雅的 `ssh <hostname>` 的 remote login；
-2. 实验环境要求在 podman 下进行（类 docker）。首先拉取对应镜像，`podman run -d --init --name beacon docker.io/yguoaz/beacon:latest sleep infinity`，在拉取的过程中可能会遇到 insufficient pids or uids 的错误，可通过 `cat /proc/self/uid_map`、`cat /proc/self/gid_map` 来查看相应的情况。解决方案——添加参数 `--storage-opt ignore_chown_errors=true`。成功拉取 image 后，进入容器，为了编译得到 Clang bitcode ⽂件，需要使⽤ wllvm，通过 `python3 -m pip install wllvm` 安装。为了通过 tmux 运⾏ Beacon AFL（使 shell 与进程分离，类 nohup），需要使用 tmux，通过`apt update; apt install tmux` 安装。至此，初期的准备工作基本完成；
+2. 实验环境要求在 podman 下进行（类 docker）。首先拉取对应镜像，`podman run -d --init --name beacon docker.io/yguoaz/beacon:latest sleep infinity`，在拉取的过程中可能会遇到 insufficient pids or uids 的错误，可通过 `cat /proc/self/uid_map`、`cat /proc/self/gid_map` 来查看相应的情况。
+3. 解决方案——添加参数 `--storage-opt ignore_chown_errors=true`。成功拉取 image 后，进入容器，为了编译得到 Clang bitcode ⽂件，需要使⽤ wllvm，通过 `python3 -m pip install wllvm` 安装。为了通过 tmux 运⾏ Beacon AFL（使 shell 与进程分离，类 nohup），需要使用 tmux，通过`apt update; apt install tmux` 安装。至此，初期的准备工作基本完成；
 
-**获取目标软件并编译**
+#### **获取目标软件并编译**
 
 3. 可通过查询 NVD 的方式（以 CVE-2017-7578 为例），访问 `https://nvd.nist.gov/vuln/detail/CVE-2017-7578`，即可获取该 CVE 的相关信息。重点查看下方的 hyperlink，一般情况下可获得关于源码的指向。而后采用 git clone 的方式，获取源码，并用 git checkout 的方式切换到该 CVE 对应 patch 的前一个 comitID，以对该 CVE 进行下一步测试。注意，若有连续多个 commit 对该 CVE 进行 patch，应回退到最早 commit 之前的版本。
 
-
+<figure><img src="../.gitbook/assets/image.png" alt="" width="563"><figcaption></figcaption></figure>
 
 3.  查看源码路径下 README / INSTALL 之类的文件，获取编译该目标软件的方法，注意在编译的过程中要传递 wllvm 环境变量。一种可能的编译方式如下：
 
@@ -44,7 +47,7 @@ Beacon 实验是指将目标软件编译成 .bc 文件后再喂给 fuzzer 的过
 
 <figure><img src="../.gitbook/assets/2103625830.png" alt=""><figcaption></figcaption></figure>
 
-**模糊测试**
+#### **模糊测试**
 
 7.  启动一个 tmux 用于持续运行，`tmux -u new -s <tmux_name>`，进入模糊测试路径，并准备测试用例文件夹 in。对于 initial input，可参考以下顺序：
 
@@ -56,7 +59,7 @@ Beacon 实验是指将目标软件编译成 .bc 文件后再喂给 fuzzer 的过
 
     而后使用 `taskset -ac 4 /Beacon/afl-fuzz -i in -o out -m none -t 9999 -d -- ./<target_bin> @@`，其中，-ac 用来绑定 cpu，可提前使用 htop 命令查看 cpu 的具体使用情况。对于 -- 后面的参数，请参考 aflgo github 仓库中提供的 [\*.sh](https://github.com/aflgo/aflgo/tree/master/scripts/fuzz)。
 
-**结果分析**
+#### **结果分析**
 
 8.  对于在 24h 内能成功 fuzzing 出 crash 的 CVE，计算其首次触发 crash 的时间。通过时间戳进行计算，具体参考以下脚本：
 
@@ -126,7 +129,7 @@ Beacon 实验是指将目标软件编译成 .bc 文件后再喂给 fuzzer 的过
 
     其主要思路为，用 pin 记录下所有执行地址，用 objdump -t 的方式提前从符号表中获取对应 func 的 address，最后用 grep 的方式进行匹配。在脚本运行的过程中，请注意程序是否陷入**死循环**，若出现此类情况，请及时退出并删除 crash，避免浪费大量时间。至此，实验结束。
 
-#### 结语
+### 结语
 
 折腾即真理，在实验过程中反复被虐，不断寻求解决方案，从而拓展能力边界。也许人类进化的本质就是，在遇到某个问题要求的能力超出目前的可达范围，但是踮起脚尖又勉强能够到的情况下，大脑会申请一个进程，不断计算、进化，直到成功求解 / 中途手动 quit 该问题。晚上睡不着估计也是同理，大脑飞速运转，不停申请、调度资源，不允许后台运行，对褪黑素的敏感度下降，导致迟迟无法入眠……做这个实验三周以来，基本没怎么好好睡过觉。\
 还有几点比较深的感受：将文件夹结构化；降低对事情进展的预期，因为每天都会碰上新问题；对于大量测试用例，注意构建自动化脚本。

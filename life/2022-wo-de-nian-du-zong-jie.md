@@ -1,45 +1,14 @@
 # 2022，我的年度总结
 
-## 成年人要学会做自己的事情
-
-
-
-* [ 博客](https://bkcat.cn/)
-* [周报](https://bkcat.cn/index.php/259.html)
-* [友人](https://bkcat.cn/index.php/111.html)
-* [关于](https://bkcat.cn/index.php/start-page.html)
-
-## 2022，我的年度总结
-
-&#x20;2023-01-19 Thu 01:57AM [ 编辑](https://bkcat.cn/admin/write-post.php?cid=204)
-
-***
-
-1. [一月](https://bkcat.cn/index.php/archives/204/#toc\_title0)
-2. [February](https://bkcat.cn/index.php/archives/204/#toc\_title1)
-3. [Mäerz](https://bkcat.cn/index.php/archives/204/#toc\_title2)
-4. [apríl](https://bkcat.cn/index.php/archives/204/#toc\_title3)
-5. [Peut](https://bkcat.cn/index.php/archives/204/#toc\_title4)
-6. [Июнь](https://bkcat.cn/index.php/archives/204/#toc\_title5)
-7. [जुलाईमाह](https://bkcat.cn/index.php/archives/204/#toc\_title6)
-8. [agosto](https://bkcat.cn/index.php/archives/204/#toc\_title7)
-9. [syyskuu](https://bkcat.cn/index.php/archives/204/#toc\_title8)
-10. [Oktober](https://bkcat.cn/index.php/archives/204/#toc\_title9)
-11. [නොවැම්බර්](https://bkcat.cn/index.php/archives/204/#toc\_title10)
-12. [Dezember](https://bkcat.cn/index.php/archives/204/#toc\_title11)
-
 _马上要过新年啦，又要长大一岁。人生不过匆匆几十载，还是值得花点时间回忆一下过去一年发生的点点滴滴。谨以此文纪念过去的 **2022**🎞️_
 
 #### 一月
 
-南方的孩子第一次看到雪是真得很激动。雪人也不再仅仅停留在电视屏幕上，穿过了虚无，变成了真像，我眼中倒映着的像。\
-[![2023-01-18T15:07:30.png](https://bkcat.cn/usr/uploads/2023/01/627317802.png)](https://bkcat.cn/usr/uploads/2023/01/627317802.png)
+南方的孩子第一次看到雪是真得很激动。雪人也不再仅仅停留在电视屏幕上，穿过了虚无，变成了真像，我眼中倒映着的像。
 
 此时正值期末周，大一上学期的期末考试，考试强度：五场考试 / 十天，不得不说真是太轻松了。每天早起去图书馆复习，下午躺在沙发上看杂志 / 书籍（《刑警江湖》与《弹在膛上》真好看嘿嘿），晚上回宿舍激情打牌，那段日子真是充实啊哈哈哈。
 
-记得有一天晚上去 MC 吃饭，碰上了[学委吴](https://skywt.cn/)，我们一拍即合，怀揣着“去 TM 的考试吧，我们要去玩啦”的想法，骑了四公里的共享单车，前往北校一探究竟，回来还在公寓门口美美地吃了一顿烧烤。
-
-[![2023-01-18T15:16:39.png](https://bkcat.cn/usr/uploads/2023/01/478193189.png)](https://bkcat.cn/usr/uploads/2023/01/478193189.png)\
+记得有一天晚上去 MC 吃饭，碰上了[学委吴](https://skywt.cn/)，我们一拍即合，怀揣着“去 TM 的考试吧，我们要去玩啦”的想法，骑了四公里的共享单车，前往北校一探究竟，回来还在公寓门口美美地吃了一顿烧烤。[![2023-01-18T15:16:39.png](https://bkcat.cn/usr/uploads/2023/01/478193189.png)](https://bkcat.cn/usr/uploads/2023/01/478193189.png)\
 [![2023-01-18T15:18:13.png](https://bkcat.cn/usr/uploads/2023/01/590181539.png)](https://bkcat.cn/usr/uploads/2023/01/590181539.png)
 
 还是在[学委吴](https://skywt.cn/)的指导下，开始走上了“购买服务器，搭建博客”的漫漫折腾之路。
@@ -52,9 +21,7 @@ _马上要过新年啦，又要长大一岁。人生不过匆匆几十载，还�
 
 [![2023-01-18T15:30:23.png](https://bkcat.cn/usr/uploads/2023/01/3423682228.png)](https://bkcat.cn/usr/uploads/2023/01/3423682228.png)
 
-感谢县团委的大力支持，体验了一把~~领导视察~~(包工头)的感觉，游览了一些工程，很开心看到了家乡近些年的发展！
-
-[![2023-01-18T15:35:07.png](https://bkcat.cn/usr/uploads/2023/01/3956563511.png)](https://bkcat.cn/usr/uploads/2023/01/3956563511.png)
+感谢县团委的大力支持，体验了一把~~领导视察~~(包工头)的感觉，游览了一些工程，很开心看到了家乡近些年的发展
 
 当然也还有必不可少的老友聚会环节，能看到那么多熟悉的面孔，不禁感叹回家真好！\
 回家期间看了一些书，犹记得其中一段浪漫的话：

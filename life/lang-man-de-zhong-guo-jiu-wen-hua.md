@@ -1,5 +1,7 @@
 # 浪漫的中国酒文化
 
+<figure><img src="../.gitbook/assets/image (10).png" alt=""><figcaption></figcaption></figure>
+
 酒不醉人人自醉
 
 古来圣贤皆寂寞 惟有饮者留其名

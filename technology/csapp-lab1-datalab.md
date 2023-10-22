@@ -1,13 +1,21 @@
 # CSAPP —— lab1 datalab
 
-阅读 README && bits.c 中的要求； ./dlc -e bits.c 用来检测代码是否合规； make btest 用来编译，而后键入 ./btest 测试所写代码的正确性； ./ishow || ./fshow 可查看对应数字的十六进制表示； 对 op 的作用理解：
+### 准备工作
 
-!：逻辑判断，是否为 0 \~：二进制补码转换 &、|：构造特定位上的 0 / 1 <<、>>：二进制乘除 WriteUp
+1. 阅读 README && bits.c 中的要求；
+2. &#x20;`./dlc -e bits.c` 用来检测代码是否合规；&#x20;
+3. `make btest` 用来编译，而后键入 `./btest` 测试所写代码的正确性；
+4. &#x20;`./ishow || ./fshow` 可查看对应数字的十六进制表示；&#x20;
+5. 对 op 的作用理解：
+   * !：逻辑判断，是否为 0&#x20;
+   * \~：二进制补码转换
+   * &#x20;&、|：构造特定位上的 0 / 1&#x20;
+   * <<、>>：二进制乘除
+
+### WriteUp
 
 1. bitAnd 根据离散数学的知识，对 x & y 取反再取反，得到 \~(\~x | \~y)。
-
-2.getByte 要得到什么？某一字节的数据。那么如何处理其它字节的数据 —— &0 / ^self，方便起见这里采用 &0 的方式。因为所有的数据在底层都是一串 01，所以要想进行乘除，可以采用 shift。做法：将特定字节右移到最低位字节，再 &0xff。
-
+2. getByte 要得到什么？某一字节的数据。那么如何处理其它字节的数据 —— &0 / ^self，方便起见这里采用 &0 的方式。因为所有的数据在底层都是一串 01，所以要想进行乘除，可以采用 shift。做法：将特定字节右移到最低位字节，再 &0xff。
 3. logicalShift 正数直接右移没问题，主要处理一下负数右移产生的多余的 1（算术右移，空位补符号位导致），采用 & 的方式将其转变成 0。
 4. bitCount 在不允许使用 looping && control statement 的情况下，完全没思路。参考别人的想法——二分法，分组判断有几个 1，最后累加求解。
 5. bang 这题比较 tricky，用到的性质 self | self's complement = full 1（即 -1），所以除了 0 以外（0 | 0 = 0），其它所有的值最终都转变为 -1，求解结果再 +1，实现非 0 值 → 0、0 → 1，bang！
@@ -17,16 +25,12 @@
 9. negate 根据反码的计算公式，\~x + 1 水到渠成。
 10. isPositive 首先得非负，所以判断其最高位。其次不为 0，逻辑判断 !! 就派上用场了。
 11. isLessOrEqual 考虑到 overflow 的情况，因此分情况讨论。当 x 与 y 同号，判断二者差的符号位；当 x 与 y 异号，判断 x 的符号位。表达式为：((!same) & x\_sign) | (same & !(diff\_sign)) ，对于结果为 0 / 1 的情况，可以参考此种手法，实现选择性返回。
-
-12.ilog2 目标：返回最高位 1 所在位数。借鉴 bitCount 思路，采用二分法，分组查询累加。
-
-13. float\_neg tip：从此题开始，可以用各式各样的 op && condition control && looping
-
-若 NaN 返回 argument，否则返回 -argument。NaN 的判断依据是 exp == full 1 && frac ！= 0。可以通过先将 argument 左移一位，去除符号位的影响，再通过 if 判断。
-
+12. ilog2 目标：返回最高位 1 所在位数。借鉴 bitCount 思路，采用二分法，分组查询累加。
+13. float\_neg tip：从此题开始，可以用各式各样的 op && condition control && looping。若 NaN 返回 argument，否则返回 -argument。NaN 的判断依据是 exp == full 1 && frac ！= 0。可以通过先将 argument 左移一位，去除符号位的影响，再通过 if 判断。
 14. float\_i2f 将 int → float，逐步求 sign、exp、frac 即可。注意对有进位的情况进行修正。
+15. float\_twice 基本思路同 float\_i2f。注意讨论 exp 全0、全1、非全0全1，三种情况下，应该对 frac / exp 做怎样的处理。
 
-15.float\_twice 基本思路同 float\_i2f。注意讨论 exp 全0、全1、非全0全1，三种情况下，应该对 frac / exp 做怎样的处理。
+### Code
 
 ```cpp
 /* 

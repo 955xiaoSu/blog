@@ -1,10 +1,8 @@
 # 对 AI 的认知
 
-### 前言
+前言
 
 自从去年 11 月份 ChatGPT 上线之后，有关 AI 的言论层出不穷。当接收的信息量过大时，会麻木到不加以辨别什么是“别人想让我看到、听到的”，什么又是“事实”，为纠正这样的思维模式，笔者特此梳理一下自身对于 AI 的认知。
-
-
 
 ### 发展历程
 
@@ -22,53 +20,63 @@ ChatGPT 基于机器学习去产生 human-like text，换句话说，它是根�
 
 根据 Andrej Karpathy 在 Microsoft Build 2023 上的[演讲](https://www.bilibili.com/video/BV1X24y1A7Rz/?spm\_id\_from=333.1007.top\_right\_bar\_window\_history.content.click\&vd\_source=68401e073d6cf69f6f72f1ad56c67eaf)，ChatGPT 的一些细节以 slides 的形式展示如下：
 
-GPT 训练过程：[![2023-08-08T03:02:52.png](https://bkcat.cn/usr/uploads/2023/08/408193686.png)](https://bkcat.cn/usr/uploads/2023/08/408193686.png)
+GPT 训练过程
 
-Token 的含义：\
+<figure><img src="../.gitbook/assets/image (14).png" alt=""><figcaption></figcaption></figure>
 
+Token 的含义：
 
-预训练过程：\
+<figure><img src="../.gitbook/assets/image (15).png" alt=""><figcaption></figcaption></figure>
 
+预训练过程：
 
-可参考的架构图如下：\
+<figure><img src="../.gitbook/assets/image (17).png" alt=""><figcaption></figcaption></figure>
 
+可参考的架构图：
 
-在度过盲目崇拜的阶段之后，需理性分析一下它存在的问题。以下总结自吴翰清在岳麓讲坛上的分享：
+<figure><img src="../.gitbook/assets/7dee7120541eb17dd7644d6439e1a27.jpg" alt=""><figcaption></figcaption></figure>
+
+在度过盲目崇拜的阶段之后，需理性分析一下它存在的问题。以下总结自**吴翰清**在岳麓讲坛上的分享：
 
 > 1.如何在可学资源枯竭的情况下，取得进一步智能上的提升？\
 > 2.必然存在更为高效的算法，如何升级现有算法？\
 > 3.对于“毁灭人类”这类违反道德的回答，本质上反映的仍是一种人类意志，如何去解决？\
 > 4.计算存在数学 & 物理方面上限，如何去逼近？
 
-ChatGPT 以及一系列大模型的接踵而至，笔者认为可以看作是 AI 从弱人工智能 → 强人工智能的转折点，后续会沿着上凸曲线的轨迹发展，直到 AI 的成本从边际走向固定，人人都拥有一个 AI 助手时，AI 的发展将会踏入下一个阶段。机器会引领人类发展，社会从数字化、网络化 → 智能化。值得注意的是，当 AI 演化成一种个人资产后，要时刻问问自己“自己面对的是真的 AI 吗”，其道理就类似近几年层出不穷的电信诈骗，熟人要求 vx / 银行卡转账，只要有利可图，很多意料不到的情况都会涌现，因此让**安全**意识扎根于心是很有必要的。
+ChatGPT 以及一系列大模型的接踵而至，笔者认为可以看作是 AI 从弱人工智能 → 强人工智能的转折点，后续会沿着上凸曲线的轨迹发展，直到 AI 的成本从边际走向固定，人人都拥有一个 AI 助手时，AI 的发展将会踏入下一个阶段。机器一定会引领人类发展，社会从数字化、网络化转型智能化。值得注意的是，当 AI 演化成一种个人资产后，要时刻问问自己“自己面对的是真的 AI 吗”，其道理就类似近几年层出不穷的电信诈骗，熟人要求 vx / 银行卡转账，只要有利可图，很多意料不到的情况都会涌现，因此让**安全**意识扎根于心是很有必要的。
 
 #### 对人工神经网络的认知梳理
 
-人工神经网络是仿照人的认知模型（神经元之间的电信号传递）建立起的一种机器学习的方法。其基本依据是：“正确答案”的神经元之间的连接被强化，“错误答案”的神经元之间的连接被弱化。\
-[![e03bda5d415a7d033ec09487bf2acef.jpg](https://bkcat.cn/usr/uploads/2023/09/1723516915.jpg)](https://bkcat.cn/usr/uploads/2023/09/1723516915.jpg)
+人工神经网络是仿照人的认知模型（神经元之间的电信号传递）建立起的一种机器学习的方法。其基本依据是：“正确答案”的神经元之间的连接被强化，“错误答案”的神经元之间的连接被弱化。
 
-人工神经网络的 workflow：\
-[![10bfdb4001750a9128735882bb36b67.jpg](https://bkcat.cn/usr/uploads/2023/09/1483497643.jpg)](https://bkcat.cn/usr/uploads/2023/09/1483497643.jpg)\
+<figure><img src="../.gitbook/assets/e03bda5d415a7d033ec09487bf2acef (1).jpg" alt="" width="375"><figcaption></figcaption></figure>
+
+人工神经网络的 workflow：
+
+<figure><img src="../.gitbook/assets/10bfdb4001750a9128735882bb36b67.jpg" alt="" width="375"><figcaption></figcaption></figure>
+
 发展历史：
 
 1. 1958年提出 Rosenablatt 感知器（单层双输入感知器、线性感知器）；
-2. 为了解决“不能线性分割的问题”，引入用反向传播算法训练的多层感知器（含有隐含层、采用 S 型激活函数）；\
-   [![ffc30b53097d5376d967fd3e1bd53a7.jpg](https://bkcat.cn/usr/uploads/2023/09/3466313992.jpg)](https://bkcat.cn/usr/uploads/2023/09/3466313992.jpg)
+2.  为了解决“不能线性分割的问题”，引入用反向传播算法训练的多层感知器（含有隐含层、采用 S 型激活函数）；
+
+    <figure><img src="../.gitbook/assets/ffc30b53097d5376d967fd3e1bd53a7.jpg" alt="" width="375"><figcaption></figcaption></figure>
 3. 为了“模拟人类的联想功能”，引入循环神经网络（Hopfiled 网络、BAM）。之前的神经网络不具备知识迁移 / 自适应能力，还是学习的深度不够；
 4. 神经网络最主要的特征就是具有**从环境中学习**的能力，引入无监督学习算法；
    * 目标：快速学习
    * 场景：动态变化 & 预料之外条件的处理
    * 依据：自组织神经网络（模仿人类大脑，每个感官输入都会映射到大脑皮层的相应区域）
      * Hebbian学习（考察两个神经元的联系，若同时被激活则增加权重，否则减少权重）
-     * 竞争学习（“赢者通吃”，Kohonen网络）\
-       [![92345cbf44db1aa87eb80bacaaefe06.jpg](https://bkcat.cn/usr/uploads/2023/09/606377119.jpg)](https://bkcat.cn/usr/uploads/2023/09/606377119.jpg)
+     * 竞争学习（“赢者通吃”，Kohonen网络）
+
+<figure><img src="../.gitbook/assets/92345cbf44db1aa87eb80bacaaefe06.jpg" alt="" width="563"><figcaption></figcaption></figure>
 
 ### 使用、鉴别与评价 AI
 
 为了更好地使用 AI，不妨学习一下吴恩达与 OpenAI 联合推出的 prompt 教学：\
 [https://learn.deeplearning.ai/chatgpt-prompt-eng/lesson/1/introduction](https://learn.deeplearning.ai/chatgpt-prompt-eng/lesson/1/introduction)。
 
-笔者学习之后，总结写 prompt 的两个 trick：1.简洁；2.明确。另外，在使用的时候可根据"Do Anything Now"原则，尝试让 ChatGPT 进行 roleplay，以获得更高质量的回答。也可以尝试分段描述你的要求，降低对 GPT 的推理强度要求，以获得更为准确的回答。
+笔者学习之后，总结写 prompt 的两个 trick：**1.简洁；2.明确。**另外，在使用的时候可根据"Do Anything Now"原则，尝试让 ChatGPT 进行 roleplay，以获得更高质量的回答。也可以尝试分段描述你的要求，降低对 GPT 的推理强度要求，以获得更为准确的回答。
 
 同时推荐阅读顶级华裔科学家陆奇最新的[演讲实录](https://wallstreetcn.com/articles/3687254)，能加深对当今大模型世界的理解。有一句话让笔者受益匪浅：
 
@@ -81,12 +89,12 @@ ChatGPT 以及一系列大模型的接踵而至，笔者认为可以看作是 AI
 3. 回答多样性 → 文本 / 图片 / 视频 / **代码**；
 4. 安全检查 → 敏感词 / 伦理道德。
 
-学习《Secutiry implications of ChatGPT》这份报告后，总结了判断文本是否为 AI 生成的四个角度：
+学习 _Secutiry implications of ChatGPT_ 这份报告后，总结了判断文本是否为 AI 生成的四个角度：
 
 1. 句式过于严谨（转折词、连接词）；
 2. 主观意识弱；
 3. 提供了过多非必要细节（比如“打开一个搜索引擎，点击搜索栏，输入xxx，点击确认”）；
-4. 专业领域的推导能力弱（如语义分析、数学证明）。
+4. 专业领域推导能力弱（如数学领域）—— 但 gpt-4 的能力肯定能 beat 99% 本科生了。
 
 ### 一些 AI 网站分享
 
@@ -94,6 +102,6 @@ ChatGPT 以及一系列大模型的接踵而至，笔者认为可以看作是 AI
 2. [New Bing](https://www.bing.com/search?form=MY02AE\&OCID=MY02AE\&pl=launch\&q=Bing+AI\&showconv=1)；
 3. [Bard](https://bard.google.com/)；
 4. [LLM](https://chat.lmsys.org/)；
-5. [国内最好用的 LLM](https://chat.jinshutuan.com/?ref=www.deepdhai.com#/chat/1684486214925)；
-6. [AI 工具导航汇总](https://ai.nancheng.fun/)；
+5. [国内最好用的 LLM](https://chatglm.cn/main/detail)；
+6. [AI 工具导航](https://ai.nancheng.fun/)；
 7. [看论文神器](https://www.chatpdf.com/)。
