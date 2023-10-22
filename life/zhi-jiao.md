@@ -31,5 +31,3 @@
 竹巷的故事就这么平淡地结束了。希望这半个月的陪伴，给孩子们带去了一份温暖，能为他们的成长轻轻推开那么一扇窗。
 
 就这样吧，云边的竹小巷，后会有期！
-
-<figure><img src="../.gitbook/assets/image (11).png" alt=""><figcaption></figcaption></figure>
