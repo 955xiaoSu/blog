@@ -206,3 +206,9 @@
 2. 连队建设；
 3. Shellshock lab、AI assignment；
 4. LLM paper & fuzzing paper。
+
+**第三十二周 10.16 \~ 10.22**
+
+1. author、Kernel 1day；
+2. 编译原理、算法设计、overflow；
+3. blog 撰写 & 迁移、gpt-4、routine & 连队建设。
