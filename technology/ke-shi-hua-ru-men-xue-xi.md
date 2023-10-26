@@ -52,7 +52,7 @@
 
 作为库文件引入使用示例：
 
-<figure><img src="../.gitbook/assets/image (3) (1) (1).png" alt="" width="563"><figcaption></figcaption></figure>
+<figure><img src="../.gitbook/assets/image (3) (1) (1) (1).png" alt="" width="563"><figcaption></figcaption></figure>
 
 在线修改 demo 使用示例：
 
