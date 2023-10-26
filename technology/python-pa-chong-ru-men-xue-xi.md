@@ -30,7 +30,7 @@
 > 3. 定位好前端代码后，紧接着是使用正则表达式进行数据获取。**正则表达式（regular expression, re）** 是一种字符串匹配模式，可以用来判定一个字符串中是否含有某种子串、进行字符串替换或者取出字符串中符合某个条件的子串等，详细内容可参考[菜鸟教程：正则表达式](https://www.runoob.com/regexp/regexp-syntax.html)。为了找出相应资源的前端代码，首先要使用 re.compile() 方法规定出相应资源的“模样”，其次再用这种“模样”去匹配前端代码。这就像相亲，你先在心目中构建一个对伴侣的期待，然后在海一般的相亲市场中根据你的期待去匹配心仪的相亲对象。此时你的期待就是“模样”，相亲市场就是网页中所有的前端代码，现在要做的就是在所有的前端代码中找出你想要的“模样”代码，也就是我们想要的资源（即下文所称的数据）。
 > 4. 使用正则表达式成功匹配数据之后，可以使用python自带的**json模块**，把数据以.json形式存储到本地。当然也可以引入像**MySQL / sqlite**之类的数据库，使用SQL（Structured Query Language）语言，把数据以.db形式存储到本地
 
-<figure><img src="../.gitbook/assets/image (2) (1).png" alt=""><figcaption><p>Fig.1</p></figcaption></figure>
+<figure><img src="../.gitbook/assets/image (2) (1) (1).png" alt=""><figcaption><p>Fig.1</p></figcaption></figure>
 
 #### **样例分析**：
 

@@ -6,7 +6,7 @@
 
 ## Technology
 
-* [Heap Exploitation —— UAF](technology/heap-exploitation-uaf.md)
+* [Heap Exploitation——UAF](technology/heap-exploitation-uaf.md)
 * [GPT-4 初体验](technology/gpt4-chu-ti-yan.md)
 * [对 AI 的认知](technology/dui-ai-de-ren-zhi.md)
 * [关于定向 fuzz 的总结](technology/guan-yu-ding-xiang-fuzz-de-zong-jie.md)
