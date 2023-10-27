@@ -70,7 +70,7 @@
 
 ***
 
-#### SELECTFUZZ: Efficient Directed Fuzzing with Selective Path Exploration (2023)
+### SELECTFUZZ: Efficient Directed Fuzzing with Selective Path Exploration (2023)
 
 **workflow**
 

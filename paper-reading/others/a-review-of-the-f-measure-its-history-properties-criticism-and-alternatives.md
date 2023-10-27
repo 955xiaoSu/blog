@@ -20,7 +20,7 @@
     * F-measure 被广泛应用于信息提取、文本分类等多个计算机领域。
     * 根据 google scholar 的检索结果显示，1980-2020年 对 F-measure 的检索数量总体上呈上升趋势。
 
-    <figure><img src="../../.gitbook/assets/image (1) (1) (1) (1) (1).png" alt=""><figcaption></figcaption></figure>
+    <figure><img src="../../.gitbook/assets/image (1) (1) (1) (1) (1) (1).png" alt=""><figcaption></figcaption></figure>
 *   属性：本综述讨论的 F-measure 机制假定为当 score(x) > thresholed 时，x 被划分入 class 1，否则被划分入 class 0。召回率 R、精度 P 与检索效率 E 的定义如下：
 
     > — Recall R = TP/(TP + FN),
