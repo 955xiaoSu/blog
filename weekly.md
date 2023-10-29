@@ -209,6 +209,12 @@
 
 **第三十二周 10.16 \~ 10.22**
 
-1. author、Kernel 1day；
+1. author、Kernel 1day 规划；
 2. 编译原理、算法设计、overflow；
 3. blog 撰写 & 迁移、gpt-4、routine & 连队建设。
+
+**第三十二周 10.23 \~ 10.29**
+
+1. kernel 1day 开头；
+2. overflow 收尾、堆利用学习与 pre；
+3. blog 撰写、整理知识体系、drink。
