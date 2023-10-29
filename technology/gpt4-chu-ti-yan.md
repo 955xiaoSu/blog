@@ -19,7 +19,7 @@
 
 
 
-    <figure><img src="../.gitbook/assets/image (4) (1) (1) (1).png" alt=""><figcaption></figcaption></figure>
+    <figure><img src="../.gitbook/assets/image (4) (1) (1) (1) (1).png" alt=""><figcaption></figcaption></figure>
 
     * 添加环境变量之后，键入 `source ~/.bashrc` 或 `source ~/.zshrc`（取决于你使用的 shell 是 bash 还是 zsh 或者是其它 shell），刷新配置文件，使刚添加的环境变量生效。可使用  `wget google.com` 来测试是否成功访问外网。
 * 方法二：使用 `proxychains` 工具。首先 `sudo apt install proxychains` 而后在 `/etc/proxychains.conf` 根据提示修改 proxy\_ip 和 port。修改完成后，对需访问外网的命令添加前缀 proxychains 即可。
@@ -87,6 +87,6 @@ while True:
 
 <figure><img src="../.gitbook/assets/image (6) (1) (1).png" alt=""><figcaption><p>求三次方程的解</p></figcaption></figure>
 
-<figure><img src="../.gitbook/assets/image (2) (1) (1) (1) (1) (1).png" alt=""><figcaption><p>复杂的不定积分求解</p></figcaption></figure>
+<figure><img src="../.gitbook/assets/image (2) (1) (1) (1) (1) (1) (1).png" alt=""><figcaption><p>复杂的不定积分求解</p></figcaption></figure>
 
-<figure><img src="../.gitbook/assets/image (1) (1) (1) (1) (1) (1) (1).png" alt=""><figcaption><p>无法用初等函数表示的不定积分求解</p></figcaption></figure>
+<figure><img src="../.gitbook/assets/image (1) (1) (1) (1) (1) (1) (1) (1).png" alt=""><figcaption><p>无法用初等函数表示的不定积分求解</p></figcaption></figure>

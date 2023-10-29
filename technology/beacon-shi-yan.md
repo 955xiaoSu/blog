@@ -22,7 +22,7 @@ Beacon 实验是指将目标软件编译成 .bc 文件后再喂给 fuzzer 的过
 
 3. 可通过查询 NVD 的方式（以 CVE-2017-7578 为例），访问 `https://nvd.nist.gov/vuln/detail/CVE-2017-7578`，即可获取该 CVE 的相关信息。重点查看下方的 hyperlink，一般情况下可获得关于源码的指向。而后采用 git clone 的方式，获取源码，并用 git checkout 的方式切换到该 CVE 对应 patch 的前一个 comitID，以对该 CVE 进行下一步测试。注意，若有连续多个 commit 对该 CVE 进行 patch，应回退到最早 commit 之前的版本。
 
-<figure><img src="../.gitbook/assets/image (3) (1) (1).png" alt="" width="563"><figcaption></figcaption></figure>
+<figure><img src="../.gitbook/assets/image (3) (1) (1) (1).png" alt="" width="563"><figcaption></figcaption></figure>
 
 3.  查看源码路径下 README / INSTALL 之类的文件，获取编译该目标软件的方法，注意在编译的过程中要传递 wllvm 环境变量。一种可能的编译方式如下：
 

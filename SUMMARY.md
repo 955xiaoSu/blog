@@ -38,6 +38,7 @@
 
 * [Fuzzing](lun-wen-yue-du/cumulative-reasoning/README.md)
   * [PDIFF](paper-reading/fuzzing/pdiff.md)
+  * [SyzVegas: Beating Kernel Fuzzing Odds with Reinforcement Learning](paper-reading/fuzzing/syzvegas-beating-kernel-fuzzing-odds-with-reinforcement-learning.md)
   * [SelectFuzz](lun-wen-yue-du/cumulative-reasoning/yao-qi-zhi.md)
 * [Others](paper-reading/others/README.md)
   * [Cumulative Reasoning With Language Model](paper-reading/others/cumulative-reasoning-with-language-model.md)
