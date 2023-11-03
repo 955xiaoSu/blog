@@ -2,7 +2,7 @@
 
 [SyzVegas: Beating Kernel Fuzzing Odds with Reinforcement Learning](https://www.usenix.org/system/files/sec21-wang-daimeng.pdf) 是一篇 2021 年发表在 USENIX 的研究型论文（工程创新）。一作是来自 University of California, Riverside 的  Daimeng Wang，其它作者同样来自 University of California, Riverside，他们是 Zheng Zhang, Hang Zhang Zhiyun Qian, Srikanth V. Krishnamurthy, Nael Abu-Ghazaleh。
 
-本论文的贡献：基于 Syzkaller 借助 reinforcement learning，修改 Syzkaller 中两个最关键的决策点——task selection and seed selection，提出了新 kernel fuzzer——**SyzVegas**，对比 Syzkaller，在执行效率与覆盖率方面有了一定的提升。
+该论文的贡献：基于 Syzkaller 借助 reinforcement learning，修改 Syzkaller 中两个最关键的决策点——task selection and seed selection，提出了新 kernel fuzzer——**SyzVegas**，对比 Syzkaller，在执行效率与覆盖率方面有了一定的提升。
 
 ### 背景
 

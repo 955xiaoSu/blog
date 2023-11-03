@@ -3,7 +3,7 @@
 [Araña: Discovering and Characterizing Password Guessing Attacks in Practice ](https://www.usenix.org/system/files/sec23fall-prepub-22-islam.pdf)总结：
 
 * Araña: Discovering and Characterizing Password Guessing Attacks in Practice 是一篇 2023 年发表在 USENIX 的研究型测量类论文。共同一作是来自 University of Wisconsin–Madison 的  Mazharul Islam 与 Cornell Tech 的 Marina Sanusi Bohuk，其它作者为来自 University of Wisconsin–Madison 的 Paul Chung、Rahul Chatterjee 以及来自 Cornell Tech 的 Thomas Ristenpart。
-* 本论文研究的领域是发现并识别——Remote password guessing attacks。通过研究，尝试将 attacks 分类提取特征，为安全防护提供思路。
+* 该论文研究的领域是发现并识别——Remote password guessing attacks。通过研究，尝试将 attacks 分类提取特征，为安全防护提供思路。
 * Problem
   1. 现存数据集中没有任何关于此类攻击的基本事实；
   2. 以往的工作只单独标记向登录服务发送大量请求的 IP 地址，这样的做法 miss many attacks。
@@ -35,4 +35,4 @@
     > _“For example, locking user accounts due to a small number of incorrect attempts rarely translates to higher security, whereas discouraging users from reusing passwords from other websites and using breach alerting services can be very effective. Proactive breach alerting \[27] using services such as HIBP \[22] would be very helpful in combating credential stuffing attack”_
 
 
-* 本论文实事求是，不夸大研究价值，写作上严丝合缝，实验部分与 Intro 部分前后呼应。
+* 该论文实事求是，不夸大研究价值，写作上严丝合缝，实验部分与 Intro 部分前后呼应。
