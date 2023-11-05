@@ -218,3 +218,9 @@
 1. kernel 1day 开头；
 2. overflow 收尾、堆利用学习与 pre；
 3. blog 撰写、整理知识体系、drink。
+
+**第三十三周 10.30 \~ 11.5**
+
+1. 定向 fuzzing 工作整理、AOSP;
+2. AI HW、format string；
+3. ChameleMon、Catalan、参加生日 party、review、drink & 自我认识。
