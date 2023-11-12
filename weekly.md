@@ -224,3 +224,10 @@
 1. 定向 fuzzing 工作整理、AOSP;
 2. AI HW、format string；
 3. ChameleMon、Catalan、参加生日 party、review、drink & 自我认识。
+
+**第三十四周 11.6 \~ 11.12**
+
+1. 1dFuzz、Driller、V-Fuzz、AOSP、kernel 入门讲座；
+2. 编译原理与期中考试、信安作业；
+3. 刷机（救活了板砖）、锻炼、体测。
+
