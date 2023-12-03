@@ -213,32 +213,38 @@
 2. 编译原理、算法设计、overflow；
 3. blog 撰写 & 迁移、gpt-4、routine & 连队建设。
 
-**第三十二周 10.23 \~ 10.29**
+**第三十三周 10.23 \~ 10.29**
 
 1. kernel 1day 开头；
 2. overflow 收尾、堆利用学习与 pre；
 3. blog 撰写、整理知识体系、drink。
 
-**第三十三周 10.30 \~ 11.5**
+**第三十四周 10.30 \~ 11.5**
 
 1. 定向 fuzzing 工作整理、AOSP;
 2. AI HW、format string；
 3. ChameleMon、Catalan、参加生日 party、review、drink & 自我认识。
 
-**第三十四周 11.6 \~ 11.12**
+**第三十五周 11.6 \~ 11.12**
 
 1. 1dFuzz、Driller、V-Fuzz、AOSP、kernel 入门讲座；
 2. 编译原理与期中考试、信安作业；
 3. 刷机（救活了板砖）、锻炼、体测。
 
-**第三十五周 11.13 \~ 11.19**
+**第三十六周 11.13 \~ 11.19**
 
 1. img 收集；
 2. SysVegas & SLR pre；
 3. 锻炼、队务会、训练、TED1 done、桃子湖coffee、birthday、《老板与员工》、《白帽黑客的世界》。
 
-**第三十六周 11.20 \~ 11.26**
+**第三十七周 11.20 \~ 11.26**
 
 1. img 上传 & 理解、qemu；
 2. 算法期中、ChameleMon pre、奖学金；
 3. 锻炼、训练 & 指导、TED2 done、可视化项目讨论、《探索》讲座、调解矛盾、工科小队聚餐、数学。
+
+**第三十八周 11.27 \~ 12.3**
+
+1. qemu、easy、macOS fuzzing 讲座、DAFL demo；
+2. 准备 fuzzing pre、单项奖学金；
+3. 《涉过愤怒的海》、训练。
