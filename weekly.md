@@ -245,6 +245,6 @@
 
 **第三十八周 11.27 \~ 12.3**
 
-1. qemu、easy、macOS fuzzing 讲座、DAFL demo；
+1. qemu 起内核 failed、easy、macOS fuzzing 讲座、DAFL demo；
 2. 准备 fuzzing pre、单项奖学金；
-3. 《涉过愤怒的海》、训练。
+3. 《涉过愤怒的海》、训练、windows copilot & debug。
