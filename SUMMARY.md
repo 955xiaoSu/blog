@@ -40,6 +40,7 @@
   * [PDIFF](paper-reading/fuzzing/pdiff.md)
   * [SyzVegas: Beating Kernel Fuzzing Odds with Reinforcement Learning](paper-reading/fuzzing/syzvegas-beating-kernel-fuzzing-odds-with-reinforcement-learning.md)
   * [1dFuzz: Reproduce 1-Day Vulnerabilities with Directed Differential Fuzzing](paper-reading/fuzzing/1dfuzz-reproduce-1-day-vulnerabilities-with-directed-differential-fuzzing.md)
+  * [SyzDirect: Directed Greybox Fuzzing for Linux Kernel](paper-reading/fuzzing/syzdirect-directed-greybox-fuzzing-for-linux-kernel.md)
 * [Others](paper-reading/others/README.md)
   * [Cumulative Reasoning With Language Model](paper-reading/others/cumulative-reasoning-with-language-model.md)
   * [A Review of the F-Measure: Its History, Properties, Criticism, and Alternatives](paper-reading/others/a-review-of-the-f-measure-its-history-properties-criticism-and-alternatives.md)
