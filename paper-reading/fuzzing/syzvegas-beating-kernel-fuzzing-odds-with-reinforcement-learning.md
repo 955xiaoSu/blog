@@ -9,13 +9,13 @@
 1. _Kernel fuzzing is uniquely **challenging** for the following reasons: (1) modern OS kernel often has a huge code base and many dependencies across components; (2) the input to an OS kernel is via the system call interface that needs special handling; and (3) an OS kernel maintains a massive state space that a single input (i.e., test case) may not be able reproducible._&#x20;
 2. workflow overview of Syzkaller
 
-<figure><img src="../../.gitbook/assets/image.png" alt=""><figcaption></figcaption></figure>
+<figure><img src="../../.gitbook/assets/image (1).png" alt=""><figcaption></figcaption></figure>
 
 ### **问题**
 
 1.  Syzkaller 硬编码策略无法适应动态变换的模糊测试环境与任务，同时基于作者的 observations，Syzkaller 性能方面仍存在提升的空间；                                                                                                                      &#x20;
 
-    <figure><img src="../../.gitbook/assets/image (1).png" alt="" width="375"><figcaption></figcaption></figure>
+    <figure><img src="../../.gitbook/assets/image (1) (1).png" alt="" width="375"><figcaption></figcaption></figure>
 2. 作者将问题 1 转化成如下问题：确定 **SyzVegas** 的目标在于提升 coverage 的前提下，（1）选择最有价值的模糊测试任务；（2）选择最有效的突变种子。
 
 ### **设计与实现**
