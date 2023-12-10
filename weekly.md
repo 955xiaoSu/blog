@@ -248,3 +248,9 @@
 1. qemu 起内核 failed、easy、macOS fuzzing 讲座、DAFL demo；
 2. 准备 fuzzing pre、单项奖学金；
 3. 《涉过愤怒的海》、训练、windows copilot & debug。
+
+**第三十九周 12.4 \~ 12.10**
+
+1. SyzDirect、DAFL；
+2. fuzzing pre、算法实验、编译原理作业、参会；
+3. 锻炼、训练、睡眠 & 伪造邮件 & 同步 探究、ga、竹水泽、可视化 push、base。
