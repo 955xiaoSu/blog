@@ -260,3 +260,9 @@
 1. kernel 1day 转向 static、DAFL；
 2. 软安期末报告；
 3. 锻炼、训练、中医药大学汇演参观、献血、搬椅子、base 投稿、先知沙龙。
+
+**第四十一周 12.18 \~ 12.24**
+
+1. kernel 1day（androidauthority.com & disassembly）、DAFL（no result & issue）、slides 学习、听进组面试；
+2. 信安数学期末考试、算法；
+3. 锻炼、训练（考核 & 冬至包饺子 & 明信片）、桌球、为 ga 整理所学、gpt-4、可视化 check。
