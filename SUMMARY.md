@@ -6,18 +6,19 @@
 
 ## Technology
 
+* [《信息安全论文写作》方法论](technology/xin-xi-an-quan-lun-wen-xie-zuo-fang-fa-lun.md)
 * [Heap Exploitation](technology/heap-exploitation.md)
 * [GPT-4 初体验](technology/gpt4-chu-ti-yan.md)
-* [对 AI 的认知](technology/dui-ai-de-ren-zhi.md)
 * [关于定向 fuzz 的总结](technology/guan-yu-ding-xiang-fuzz-de-zong-jie.md)
 * [Beacon 实验](technology/beacon-shi-yan.md)
-* [Python 爬虫入门学习](technology/python-pa-chong-ru-men-xue-xi.md)
-* [可视化入门学习](technology/ke-shi-hua-ru-men-xue-xi.md)
+* [对 AI 的认知](technology/dui-ai-de-ren-zhi.md)
 * [CSAPP —— lab1 datalab](technology/csapp-lab1-datalab.md)
-* [搭建个人网站](technology/da-jian-ge-ren-wang-zhan.md)
+* [可视化入门学习](technology/ke-shi-hua-ru-men-xue-xi.md)
+* [Python 爬虫入门学习](technology/python-pa-chong-ru-men-xue-xi.md)
 * [对 UNIX 新的认识](technology/dui-unix-xin-de-ren-shi.md)
-* [开源与黑客](technology/kai-yuan-yu-hei-ke.md)
 * [Great works are connected](technology/great-works-are-connected.md)
+* [开源与黑客](technology/kai-yuan-yu-hei-ke.md)
+* [搭建个人网站](technology/da-jian-ge-ren-wang-zhan.md)
 
 ## Life
 
