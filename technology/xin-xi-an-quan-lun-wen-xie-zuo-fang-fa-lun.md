@@ -49,7 +49,11 @@
 
 建立了以上基本认知后，可以进一步探讨科学研究。科学研究的一般路径是：调研某领域 → 发现问题 → 解决问题 → 写论文展示成果。因此在学写论文之前，还有一件**极其重要**的事情——学会读论文。读论文是“调研某领域”的手段，能帮助自己建立对某领域系统、准确的认知，确保自己所做的工作是前人没有做过的，是有意义的。
 
-读论文首先得有论文可读，那么论文获取的方式有哪些呢？论文获取途径：[google scholar](https://scholar.google.com/)[知网](https://www.cnki.net/)[connectedpapers](https://www.connectedpapers.com/)
+读论文首先得有论文可读，那么论文获取的方式有哪些呢？论文获取途径：
+
+* [google scholar](https://scholar.google.com/)
+* [知网](https://www.cnki.net/)
+* [connectedpapers](https://www.connectedpapers.com/)
 
 为了建立对某领域全面的认知，必须阅读大量相关论文，如何组织大量论文的存储，就需要工具加以辅助。秉承“免费、好用”的基本原则，找到了 [Zotero](https://www.zotero.org/) 这款论文管理工具。
 
@@ -61,9 +65,9 @@
 
 Zotero 的相关资料非常丰富，这里不再赘述，直接给出相应的参考链接。
 
-1. [基本操作](https://sspai.com/post/56724)；
-2. [浏览器插件](https://www.zotero.org/download/connectors)
-3. [多人共享与同步](https://zhuanlan.zhihu.com/p/348626383)
+* [基本操作](https://sspai.com/post/56724)
+* [浏览器插件](https://www.zotero.org/download/connectors)
+* [多人共享与同步](https://zhuanlan.zhihu.com/p/348626383)
 
 ### **Zotero 技术原理**
 
