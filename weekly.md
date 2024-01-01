@@ -209,13 +209,13 @@
 
 **第三十二周 10.16 \~ 10.22**
 
-1. author、Kernel 1day 规划；
+1. author、kernel 规划；
 2. 编译原理、算法设计、overflow；
 3. blog 撰写 & 迁移、gpt-4、routine & 连队建设。
 
 **第三十三周 10.23 \~ 10.29**
 
-1. kernel 1day 开头；
+1. kernel 开头；
 2. overflow 收尾、堆利用学习与 pre；
 3. blog 撰写、整理知识体系、drink。
 
@@ -257,12 +257,18 @@
 
 **第四十周 12.11 \~ 12.17**
 
-1. kernel 1day 转向 static、DAFL；
+1. kernel 转向 static、DAFL；
 2. 软安期末报告；
 3. 锻炼、训练、中医药大学汇演参观、献血、搬椅子、base 投稿、先知沙龙。
 
 **第四十一周 12.18 \~ 12.24**
 
-1. kernel 1day（androidauthority.com & disassembly）、DAFL（no result & issue）、slides 学习、听进组面试；
+1. kernel （androidauthority.com & disassembly）、DAFL（no result & issue）、slides 学习、听进组面试；
 2. 信安数学期末考试、算法；
 3. 锻炼、训练（考核 & 冬至包饺子 & 明信片）、桌球、为 ga 整理所学、gpt-4、可视化 check。
+
+**第四十二周 12.25 \~ 12.31**
+
+1. kernel（w）、DAFL（no result & email）；
+2. 编译原理期末、复习；
+3. 锻炼、训练（体能考核）、debug & 蛋糕、**上王者**、37c3、论文写作 blog、下棋、《功夫》。
