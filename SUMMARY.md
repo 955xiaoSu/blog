@@ -1,7 +1,6 @@
 # Table of contents
 
 * [About me](README.md)
-* [Weekly](weekly.md)
 * [Friends](friends.md)
 
 ## Technology
