@@ -25,12 +25,6 @@ HNU 在读本科生，由理性支配大脑，向往感性生活的 INFJ
 
 
 
-**More about me,**
-
-<figure><img src=".gitbook/assets/1698458342881.png" alt=""><figcaption></figcaption></figure>
-
-
-
 **Content about this website,**
 
 * 技术记录
