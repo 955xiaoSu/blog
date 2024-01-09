@@ -234,6 +234,10 @@ Review ∈ Critique，一般而言由以下两个部分组成：
 
 <figure><img src="../.gitbook/assets/e8ab6642c2954e19b253ed4cd86e7eb.jpg" alt=""><figcaption></figcaption></figure>
 
+这里贴一张结课的大作业（主要是形式，内容都是 gpt 写的🤣）。
+
+<figure><img src="../.gitbook/assets/image (47).png" alt=""><figcaption></figcaption></figure>
+
 ## 论文投稿与评审
 
 论文写作后，需要投稿到相应的期刊 / 会议，由同行专家进行评审，审查论文质量是否合格，并决定论文能否发表。以下分享两张有关投稿与评审的截图。
