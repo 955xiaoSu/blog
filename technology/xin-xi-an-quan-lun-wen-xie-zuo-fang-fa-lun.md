@@ -242,9 +242,9 @@ Review ∈ Critique，一般而言由以下两个部分组成：
 
 论文写作后，需要投稿到相应的期刊 / 会议，由同行专家进行评审，审查论文质量是否合格，并决定论文能否发表。以下分享两张有关投稿与评审的截图。
 
-<figure><img src="../.gitbook/assets/image.png" alt=""><figcaption></figcaption></figure>
-
 <figure><img src="../.gitbook/assets/image (1).png" alt=""><figcaption></figcaption></figure>
+
+<figure><img src="../.gitbook/assets/image (1) (1).png" alt=""><figcaption></figcaption></figure>
 
 国内对于论文的评审是等级制，对论文的**选题、文献综述、研究成果、论文写作**这四个方面进行评定。更加具体的评议项目参考如下：
 
