@@ -28,7 +28,7 @@ description: >-
 
 仿真过程中，难免与逆向打交道，因此逆向工具是不可或缺的。逆向工具推荐安装 ghidra 和 IDA Pro，关于这两个工具的安装网上有非常详细的教程，不再赘述。以下分享几点使用 ghidra 的 tips：
 
-![ghidra](<../../.gitbook/assets/0 (2).png>)
+![ghidra](<../.gitbook/assets/0 (2).png>)
 
 第一手资料应参考：
 
@@ -38,31 +38,31 @@ description: >-
 
 控制命令参考：
 
-[https://htmlpreview.github.io/?https://github.com/NationalSecurityAgency/ghidra/blob/stable/GhidraDocs/CheatSheet.html](https://htmlpreview.github.io/?https://github.com/NationalSecurityAgency/ghidra/blob/stable/GhidraDocs/CheatSheet.html)
+* [https://htmlpreview.github.io/?https://github.com/NationalSecurityAgency/ghidra/blob/stable/GhidraDocs/CheatSheet.html](https://htmlpreview.github.io/?https://github.com/NationalSecurityAgency/ghidra/blob/stable/GhidraDocs/CheatSheet.html)
 
 注意在启动 ghidra 时本地是否开启了 18001 端口。若是通过 ghidraRun.bat 开启，应该是默认没有打开相关端口的，但不排除有其他打开该端口的途径，可以通过 netstat -ano | grep 18001 进行排查。
 
-![](<../../.gitbook/assets/3 (2).png>)
+![](<../.gitbook/assets/3 (2).png>)
 
 通过 window → defined strings，相当于用 strings 扫描了一遍可执行程序，提取可读字符串，获取编译环境以及程序运行逻辑的信息
 
-<figure><img src="../../.gitbook/assets/5 (2).png" alt=""><figcaption></figcaption></figure>
+<figure><img src="../.gitbook/assets/5 (2).png" alt=""><figcaption></figcaption></figure>
 
 除了逆向工具之外，binwalk 作为固件解包的利器也是必不可少的。binwalk 的安装方式有两种，一种是通过源直接获取，另一种是通过源代码编译安装，前者快捷方便，后者依赖齐全，读者可根据需要自行选择安装方式。
 
-![binwalk](<../../.gitbook/assets/1 (2).png>)
+![binwalk](<../.gitbook/assets/1 (2).png>)
 
 在坐拥 ghidra、IDA Pro 与 binwalk 三大工具之后，接下来要干的事情是学会如何检索想要的固件。仿真的对象是一个具象的固件，而我们做安全的关心有漏洞的固件，因此检索有漏洞的固件就是我们的目标。漏洞信息从何获取呢？CVE + CWE 是一个可行的方案，以下是使用 CWE 的方法论：&#x20;
 
 关于如何使用 CWE 的经验参考：
 
-[https://cwe.mitre.org/about/user\_stories.html#Security\_Architect](https://cwe.mitre.org/about/user\_stories.html#Security\_Architect)
+* [https://cwe.mitre.org/about/user\_stories.html#Security\_Architect](https://cwe.mitre.org/about/user\_stories.html#Security\_Architect)
 
 根据 New\_to\_CWE 的建议，我们可以先去搜索“CWE-798: Use of Hard-coded Credentials“该示例来了解 CWE 能为我们提供怎样的信息。
 
 首先，CWE 提供了不同维度的信息呈现方式，个人认为选择 complete / custom 是比较有性价比的，前者提供完整的消息，后者提供定制化的消息。
 
-![](<../../.gitbook/assets/6 (2).png>)
+![](<../.gitbook/assets/6 (2).png>)
 
 浏览完此示例后，可以总结 CWE 的基本构成为：
 
@@ -85,15 +85,15 @@ description: >-
 
 从 CWE-798 获取一个漏洞利用示例 CVE-2022-29953，并在 cve.org 中检索，获知受漏洞影响的厂商之一是 Bently Nevada，其产品系列是 3700，并得到一个参考链接。
 
-![](<../../.gitbook/assets/7 (2).png>)
+![](<../.gitbook/assets/7 (2).png>)
 
 从链接中，我们可以获取漏洞影响的具体版本号。
 
-![](<../../.gitbook/assets/8 (2).png>)
+![](<../.gitbook/assets/8 (2).png>)
 
 尝试从官网 support 获取 support，但是需要登录。
 
-![](<../../.gitbook/assets/9 (2).png>)
+![](<../.gitbook/assets/9 (2).png>)
 
 尝试从 github.com / google 获取固件信息，但 failed。此时可以尝试去论坛再去搜集一波信息，此处不展开。
 
@@ -107,11 +107,11 @@ description: >-
 binwalk -E <firmware_filename>
 ```
 
-![](<../../.gitbook/assets/10 (1).png>)
+![](<../.gitbook/assets/10 (1).png>)
 
-比较奇怪的一点是，熵值非常接近 1，但能够解压文件系统？
+比较奇怪的一点是，熵值非常接近 1，但能够成功解包出文件系统？
 
-* 解释：通过binwalk -Me \<firmware\_filename> 的命令强制解析固件，此时如果可以正常解析出，那么就是**压缩**，否则即为**加密**。
+* 通过binwalk -Me \<firmware\_filename> 的命令强制解析固件，此时如果可以正常解析出，那么就是**压缩**，否则即为**加密**。
 
 检索了一下 entropy 的计算原理（熵仅是用来衡量不确定性的）：
 
@@ -123,29 +123,29 @@ binwalk -E <firmware_filename>
 
 通过 tree 命令，发现文件系统是 SquashFS。Squashfs（.sfs）是一套供Linux核心使用的GPL开源只读压缩文件系统，常被用于各Linux发行版的LiveCD中，也用于OpenWrt 和DD-WRT 的路由器固件。
 
-![](<../../.gitbook/assets/11 (1).png>)
+![](<../.gitbook/assets/11 (1).png>)
 
 通过文件追踪发现 /etc/init.d/httpd 文件有如下参数调用：
 
-![](<../../.gitbook/assets/12 (1).png>)
+![](<../.gitbook/assets/12 (1).png>)
 
 将 binpath 所指的可执行文件拖入 IDA，检索字符串常量“Content-Length”可得：
 
-![](<../../.gitbook/assets/13 (1).png>)
+![](<../.gitbook/assets/13 (1).png>)
 
 检索其交叉引用，可发现下列漏洞函数，用户可写入任意长度的字符串，而不受 Content-length 的限制。
 
-![](<../../.gitbook/assets/14 (1).png>)
+![](<../.gitbook/assets/14 (1).png>)
 
-在漏洞复现中，提到“我们先模拟运行vivotek的httpd服务”，需要参考：https://jackfromeast.site/2021-01/vivotek-vul.html 实现。实现后，访问相应 url 可以看到对应的 webUI。
+在漏洞复现中，提到“我们先模拟运行vivotek的httpd服务”，需要参考：[https://jackfromeast.site/2021-01/vivotek-vul.html ](https://jackfromeast.site/2021-01/vivotek-vul.html)实现。实现后，访问相应 url 可以看到对应的 webUI。
 
-<figure><img src="../../.gitbook/assets/15 (1).png" alt=""><figcaption></figcaption></figure>
+<figure><img src="../.gitbook/assets/15 (1).png" alt=""><figcaption></figcaption></figure>
 
 运行漏洞复现提供的 fuzz 脚本，可以看到对应服务器已经捕获了 SIGSEGV 信号。
 
-![](<../../.gitbook/assets/16 (1).png>)
+![](<../.gitbook/assets/16 (1).png>)
 
-可以看到在用户态模拟的情况下，成功触发了 crash，现在我们来尝试系统级仿真，首先下载相关文件，参考：https://jackfromeast.site/2021-01/vivotek-vul.html 。**重启时记得重新分配网卡（网卡会掉），使用 mount / df 可以查看挂载的情况。**
+可以看到在用户态模拟的情况下，成功触发了 crash，现在我们来尝试系统级仿真，首先下载相关文件，参考：[https://jackfromeast.site/2021-01/vivotek-vul.html ](https://jackfromeast.site/2021-01/vivotek-vul.html)。**重启时记得重新分配网卡（网卡会掉），使用 mount / df 可以查看挂载的情况。**
 
 Q：为什么在 gdb 远程 debug 的时候需要提供 same binary？
 
@@ -153,7 +153,7 @@ A：（1）gdb 调试的原理是什么？
 
 gdb程序是父进程，被调试程序是子进程，子进程的所有信号都被父进程gdb来接管，并且父进程gdb可查看、修改子进程的内部信息，包括：堆栈、寄存器等。
 
-![t](<../../.gitbook/assets/17 (1).png>)
+![t](<../.gitbook/assets/17 (1).png>)
 
 gdb 查找调试信息的方式：
 
@@ -163,9 +163,9 @@ gdb 查找调试信息的方式：
 
 是否 strip 的差别在于 symbol information，可用 readelf -S 看到其中的差别。用 strip 并不意味着清除所有的 symbol information，而只是清除掉了 debug 相关的 section 以及一些 func name 的信息
 
-![](<../../.gitbook/assets/18 (1).png>)
+![](<../.gitbook/assets/18 (1).png>)
 
-![](<../../.gitbook/assets/19 (1).png>)
+![](<../.gitbook/assets/19 (1).png>)
 
 （2）gdbserver 远程调试的原理是什么？
 
@@ -173,41 +173,41 @@ gdb 查找调试信息的方式：
 >
 > Thus, GDB needs a way to ask the target about itself. We haven’t worked out the details yet, but in general, GDB should be able to send the target a packet asking it to describe itself
 
-![](<../../.gitbook/assets/20 (1).png>)
+![](<../.gitbook/assets/20 (1).png>)
 
 在 host machine 下载 gdb-multiarch，使用 gdb-multiarch -q httpd，而后在 qemu 中启动 start\_debug.sh，在 host machine 中通过 gef-remote 192.168.2.2 1234 远程连接，可以查看到实际发包造成 SIGSEGV 的效果，以及sp、pc 寄存器的值被覆盖。
 
-![](../../.gitbook/assets/0.png)
+![](../.gitbook/assets/0.png)
 
-![](../../.gitbook/assets/1.png)
+![](../.gitbook/assets/1.png)
 
 查看安全机制，考虑如何构造 payload。因为 NX 保护开启，所以考虑 ROP 的攻击方式。
 
-![](../../.gitbook/assets/2.png)
+![](../.gitbook/assets/2.png)
 
 关闭 ASLR：echo 0 > /proc/sys/kernel/randomize\_va\_space
 
 运行 httpd 后，获取 libc 基址。
 
-![](../../.gitbook/assets/3.png)
+![](../.gitbook/assets/3.png)
 
 通过 ROPgadget 获取可用 gadget：
 
 ```sh
-“ROPgadget --binary ./libuClibc-0.9.33.3-git.so --only "mov|pop" | grep "pc" | grep -v "#"
+ROPgadget --binary ./libuClibc-0.9.33.3-git.so --only "mov|pop" | grep "pc" | grep -v "#"
 ```
 
 要注意的一点是如果遇到 \x00，要想明白如何处理截断的问题
 
-![](../../.gitbook/assets/4.png)
+![](../.gitbook/assets/4.png)
 
 计算 padding 的长度：
 
-![](../../.gitbook/assets/5.png)
+![](../.gitbook/assets/5.png)
 
 劫持具体 so 文件的依据：
 
-![](../../.gitbook/assets/6.png)
+![](../.gitbook/assets/6.png)
 
 为了获得 libc 中 system 的地址，需要 pwntools，而 pwntools 需要 python2环境，为了在一台 host machine 上兼容各种 python 版本，用 conda 进行管理（注意 source \~/.bashrc 后生效，以及网络环境可能是 proxy / no proxy）。
 
@@ -217,7 +217,7 @@ gdb 查找调试信息的方式：
 
 在 qemu 中启动 httpd（注意提前关闭 ASLR），运行 exp 成功获得反弹 shell
 
-![](../../.gitbook/assets/7.png)
+![](../.gitbook/assets/7.png)
 
 ### 网络协议 Fuzz
 
@@ -237,11 +237,11 @@ boofuzz 学习：
 * boofuzz 源码：[https://boofuzz.readthedocs.io/en/stable/\_modules/boofuzz.html](https://boofuzz.readthedocs.io/en/stable/\_modules/boofuzz.html)
 * 对于 boofuzz 更加深入的学习：[https://www.iotsec-zone.com/article/322](https://www.iotsec-zone.com/article/322)
 
-![descript](<../../.gitbook/assets/0 (1).png>)
+![descript](<../.gitbook/assets/0 (1).png>)
 
 协议可以理解为是一组动作序列，此时要做的是构造每个字段
 
-![](<../../.gitbook/assets/1 (1).png>)
+![](<../.gitbook/assets/1 (1).png>)
 
 Boofuzz 实例：复现的背景是CVE-2018-5767 是 TENDA-AC15 型号路由器上的一个漏洞，产生的原因是没有限制用户的输入，使用函数 sscanf 直接将输入拷贝到栈上，导致栈溢出，可以修改返回地址，进而远程执行代码。
 
@@ -251,21 +251,21 @@ Boofuzz 实例：复现的背景是CVE-2018-5767 是 TENDA-AC15 型号路由器�
 
 在没有快捷键的情况下，通过如下方式查找常量字符串。看反汇编是在 “IDA View-A” window。“IDA View-A” 有图形视图和文本视图，在空白处右键可进行视图模式的切换。
 
-![](<../../.gitbook/assets/2 (1).png>)
+![](<../.gitbook/assets/2 (1).png>)
 
-![](<../../.gitbook/assets/3 (1).png>)
+![](<../.gitbook/assets/3 (1).png>)
 
 用 qemu-arm-static 启动 httpd 发现卡死，通过字符串常量的交叉引用定位到函数
 
-![descript](<../../.gitbook/assets/4 (1).png>)
+![](<../.gitbook/assets/4 (1).png>)
 
 为了 patch 分支，尝试安装 Keypatch 未果（需安装 idc module 遇到了 python 版本问题）；尝试安装另一款插件 Patching，但 IDA Pro版本不符合要求；尝试在机器码层面 patch 分支（未弄懂 arm 指令汇编未果）。
 
-![](<../../.gitbook/assets/5 (1).png>)
+![](<../.gitbook/assets/5 (1).png>)
 
 切换到 ghidra 下进行尝试，ghidra 右键“Patch Instruction”可直接修改！
 
-![](<../../.gitbook/assets/6 (1).png>)
+![](<../.gitbook/assets/6 (1).png>)
 
 再次启动仍然报错，回查 n 处，发现需要 br0 网卡，自行创建 br0 网卡：
 
@@ -274,27 +274,27 @@ sudo tunctl -t br0
 sudo ifconfig br0 192.168.2.3/24
 ```
 
-![descript](<../../.gitbook/assets/7 (1).png>)
+![](<../.gitbook/assets/7 (1).png>)
 
 执行 cp -rf ./webroot\_ro/\* ./webroot/，通过 qemu 模拟，最后借助 browser 访问的方式确认启动成功。
 
-![descript](../../.gitbook/assets/8.png)
+![](../.gitbook/assets/8.png)
 
 为了 fuzz passwd，应当通过以下两个 condition：
 
-![](../../.gitbook/assets/9.png)
+![](../.gitbook/assets/9.png)
 
-![](../../.gitbook/assets/10.png)
+![](../.gitbook/assets/10.png)
 
 在 wsl2 通过 CLI 的方式开启 google-chrome 的代理：
 
-<figure><img src="../../.gitbook/assets/11.png" alt=""><figcaption></figcaption></figure>
+<figure><img src="../.gitbook/assets/11.png" alt=""><figcaption></figcaption></figure>
 
 利用 poc 触发 exception：
 
-![](../../.gitbook/assets/12.png)
+![](../.gitbook/assets/12.png)
 
-![](../../.gitbook/assets/13.png)
+![](../.gitbook/assets/13.png)
 
 ### CVE-2023-20073
 
@@ -302,7 +302,7 @@ sudo ifconfig br0 192.168.2.3/24
 
 * [https://bbs.kanxue.com/thread-278240.htm#msg\_header\_h1\_2](https://bbs.kanxue.com/thread-278240.htm#msg\_header\_h1\_2)
 
-Cisco RV340，RV340W，RV345和 RV345P 四款型号的路由器中最新固件均存在一个未授权任意文件上传漏洞 （且目前尚未修复），攻击者可以在未授权的情况下将文件上传到 /tmp/upload 目录中，然后利用 upload.cgi 程序中存在的漏洞，最终造成存储型 XSS 攻击。
+Cisco RV340，RV340W，RV345 和 RV345P 四款型号的路由器中最新固件均存在一个未授权任意文件上传漏洞 （且目前尚未修复），攻击者可以在未授权的情况下将文件上传到 /tmp/upload 目录中，然后利用 upload.cgi 程序中存在的漏洞，最终造成存储型 XSS 攻击。
 
 从思科官网下载固件包：[https://software.cisco.com/download/home/286287791/type/282465789/release/1.0.03.29](https://software.cisco.com/download/home/286287791/type/282465789/release/1.0.03.29)
 
@@ -348,7 +348,7 @@ generate_default_cert
 
 用 browser 访问对应 ip 地址，即可访问到对应的 login html
 
-![](../../.gitbook/assets/14.png)
+![](../.gitbook/assets/14.png)
 
 ### CVE-2023-46574
 
@@ -360,11 +360,11 @@ generate_default_cert
 
 下载“参考资料”文末的附件，用 sudo binwalk --run-as=root -Me TOTOLINK\_A3700R\_V9.1.2u.6165\_20211012.web。通过 find . -name "cstecgi.cgi" 查找漏洞程序的路径，拖入 ghidra 分析。通过查找字符串 “Filename” 定位漏洞程序的位置，反编译查看代码，但是漏洞并不明显。
 
-![](../../.gitbook/assets/15.png)
+![](../.gitbook/assets/15.png)
 
 借用作者这张图可以看到，是因为 FileName 没有被过滤而直接放入到 doSystem() 导致了任意代码执行的漏洞。
 
-![](../../.gitbook/assets/16.png)
+![](../.gitbook/assets/16.png)
 
 配置 mipsel 环境：
 
@@ -375,7 +375,7 @@ sudo mkdir -p /iotconfig/debootstrap/mipsel # 注意要放置在根目录，而�
 debootstrap --arch=mipsel bookworm /iotconfig/debootstrap/mipsel https://mirrors.aliyun.com/debian
 ```
 
-![](../../.gitbook/assets/17.png)
+![](../.gitbook/assets/17.png)
 
 接下来配置 schroot：sudo vim /etc/schroot/chroot.d/mipsel.conf
 
@@ -390,7 +390,7 @@ root-groups=root
 
 而后 schroot 进入验证是否配置成功：sudo schroot -c chroot:mipsel -u root
 
-![](../../.gitbook/assets/18.png)
+![](../.gitbook/assets/18.png)
 
 再将 TOTOLINK 的 squashfs-root 复制到 mispel 路径下：sudo cp -r squashfs-root /iotconfig/debootstrap/mipsel/root
 
@@ -405,7 +405,7 @@ touch /var/run/lighttpd.pid
 lighttpd -f lighttp/lighttpd.conf
 ```
 
-![descript](../../.gitbook/assets/19.png)
+![](../.gitbook/assets/19.png)
 
 因为没设置密码，所以直接空密码登录，看到跳转的 protal 复制粘贴至地址栏后访问，开 F12 拿 session id 用 curl 访问对应 cgi 程序验证漏洞。
 
@@ -413,7 +413,7 @@ lighttpd -f lighttp/lighttpd.conf
 curl http://127.0.0.1/cgi-bin/cstecgi.cgi -b "SESSION_ID=<YOUR_SESSION_ID>" -X POST -d '{"topicurl":"UploadFirmwareFile","FileName":";ls -a;"}'
 ```
 
-![](../../.gitbook/assets/20.png)
+![](../.gitbook/assets/20.png)
 
 ### Zyxel 设备：固件提取分析
 
@@ -428,13 +428,13 @@ curl http://127.0.0.1/cgi-bin/cstecgi.cgi -b "SESSION_ID=<YOUR_SESSION_ID>" -X P
 
 尝试直接用 binwalk 解包，解出来一堆 .zip && .7z，解包失败。（binwalk 记得加 -r 参数，自动 delete carved file，节省空间，避免 archlinux 爆炸）
 
-![](<../../.gitbook/assets/0 (1) (1).png>)
+![](<../.gitbook/assets/0 (1) (1).png>)
 
 参考文章的 bypass 思路是找 **\*.ri**，由于.ri文件通常用于恢复损坏的固件，它可能包含完整的系统映像，所以尝试分析 .ri 文件（攻击面的知识又增加了）。依据是来自官方 pdf 中对 .ri 文件功能的介绍 && Appendix3 Firmware Recovery（强调了别在更新期间做一些骚操作）。
 
-![](<../../.gitbook/assets/1 (1) (1).png>)
+![](<../.gitbook/assets/1 (1) (1).png>)
 
-![](<../../.gitbook/assets/2 (1) (1).png>)
+![](<../.gitbook/assets/2 (1) (1).png>)
 
 承上，继续解包 \*.ri，而后继续解包 240 文件（若解包 \*.ri 后得到的仅有 240.7z，那么对该文件解压缩即可）。观察发现存在 zyinit 文件，用 file 命令查看其文件属性。
 
@@ -519,13 +519,13 @@ scp: Connection closed
 
 最后在 archlinux 中用 binwalk 解包得到 squashfs！
 
-![](<../../.gitbook/assets/3 (1) (1).png>)
+![](<../.gitbook/assets/3 (1) (1).png>)
 
 在第二篇参考文章中，作者对 Zyxel ZyWALL Unified Security Gateway (USG) appliances 的固件逆向解包做了详细的说明。基本步骤同上，就不再浪费时间。有意思的一个思路是，可以用 strace + qemu-xxx-static 去观察 syscall 的情况，来验证解包思路的正确性。
 
 总结一下思路：直接解 .bin 发现遇到了强加密，无法直接解包。发现同路径下有关于文件功能说明的 .pdf，查阅 .pdf 之后发现 .ri 可以用来紧急启动，说明其内包含相关启动程序，遂用 binwalk 对其层层解包，浏览解包结果发现两个有意思的文件：zyinit 以及 zld\_fsextract。用 ghidra 一通分析 zld\_fsextract 可以得知其能绕过 unzip 过程中的密码，于是用 qemu 搭建系统仿真环境进行尝试。
 
-![](<../../.gitbook/assets/4 (1) (1).png>)
+![](<../.gitbook/assets/4 (1) (1).png>)
 
 ### OpenWrt
 
@@ -540,11 +540,11 @@ scp: Connection closed
 
 参考前面解决 binwalk 中 ubi\_reader 缺失的问题后，并没有解压出目标 fs，于是放弃更换另一个目标。
 
-![](<../../.gitbook/assets/5 (1) (1).png>)
+![](<../.gitbook/assets/5 (1) (1).png>)
 
 换了一个目标也是如此。
 
-![](<../../.gitbook/assets/6 (1) (1).png>)
+![](<../.gitbook/assets/6 (1) (1).png>)
 
 思考是不是因为 factory 不包含相应的文件，于是下载 sysupgrade 尝试解包，成功解出 fs，但是碰上链接被重定向至 /dev/null 的问题。参考 [link](https://bbs.kanxue.com/thread-278240.htm#msg\_header\_h1\_2) 解决（git clone 后修改 extractor.py），如果 python 版本过高如 3.12，会报找不到 imp 包的错误，将包全部修改为 importlib.util 解决（ps，conda 没办法直接配置 3.3 版本的 python）。
 
@@ -556,13 +556,13 @@ scp: Connection closed
 
 简单来说：
 
-![](<../../.gitbook/assets/7 (1) (1).png>)
+![](<../.gitbook/assets/7 (1) (1).png>)
 
-![](<../../.gitbook/assets/8 (1).png>)
+![](<../.gitbook/assets/8 (1).png>)
 
 现在明白为什么需要切换根目录时需要配合 qemu-arm-static，因为如果不这么做，执行 bash 实际上是重定向执行 squashroot 下 /bin/busybox，然而 busybox 是 arm 架构与本机架构不匹配，所以切换根目录时会触发“Exec format error”错误。
 
-![](<../../.gitbook/assets/9 (1).png>)
+![](<../.gitbook/assets/9 (1).png>)
 
 进入 qemu 之后 ，无法执行任何可执行文件，利用 file ./bin/busybox 命令后，在对应路径缺少 ld-musl-arm.so.1 解释器：
 
@@ -593,5 +593,5 @@ sudo cp /tmp/musl-install/lib/ld-xxx squashfs-root/lib/
 # 而后可以进行相应的用户级仿真 / 系统级仿真
 ```
 
-
+理论上是这么干，但是实际上弄不出来，先 give up，暂且留作 future work😭
 
