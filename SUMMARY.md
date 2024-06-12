@@ -5,6 +5,9 @@
 
 ## Technology
 
+* [固件仿真](technology/gu-jian-fang-zhen/README.md)
+  * [Page 1](technology/gu-jian-fang-zhen/page-1/README.md)
+    * [固件仿真](technology/gu-jian-fang-zhen/page-1/gu-jian-fang-zhen.md)
 * [安全随笔——安全到底是什么](technology/an-quan-sui-bi-an-quan-dao-di-shi-shi-mo.md)
 * [《信息安全论文写作》方法论](technology/xin-xi-an-quan-lun-wen-xie-zuo-fang-fa-lun.md)
 * [Heap Exploitation](technology/heap-exploitation.md)
