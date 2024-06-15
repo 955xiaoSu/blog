@@ -8,7 +8,7 @@
 
 学士、硕士与博士是高等教育的三个不同阶段，但该体系并非一成不变的。在最初，高等教育体系中只有学士与博士两个阶段，然而人们发现对于博士的要求过于苛刻，以至于许多人都无法毕业（至今仍是如此），于是引入了硕士（苏联还引入了“[副博士](https://zh.wikipedia.org/wiki/%E5%89%AF%E5%8D%9A%E5%A3%AB%E5%AD%A6%E4%BD%8D)”）阶段。至此才演化到如今中西方普遍采用的“学士—硕士—博士”这样的高等教育体系。
 
-<figure><img src="../.gitbook/assets/image (2).png" alt=""><figcaption><p>学位体系</p></figcaption></figure>
+<figure><img src="../.gitbook/assets/image (2) (1).png" alt=""><figcaption><p>学位体系</p></figcaption></figure>
 
 高等教育体系对不同阶段的学习者提出了不同的能力要求，可简单概括如下：
 
@@ -242,9 +242,9 @@ Review ∈ Critique，一般而言由以下两个部分组成：
 
 论文写作后，需要投稿到相应的期刊 / 会议，由同行专家进行评审，审查论文质量是否合格，并决定论文能否发表。以下分享两张有关投稿与评审的截图。
 
-<figure><img src="../.gitbook/assets/image (1).png" alt=""><figcaption></figcaption></figure>
-
 <figure><img src="../.gitbook/assets/image (1) (1).png" alt=""><figcaption></figcaption></figure>
+
+<figure><img src="../.gitbook/assets/image (1) (1) (1).png" alt=""><figcaption></figcaption></figure>
 
 国内对于论文的评审是等级制，对论文的**选题、文献综述、研究成果、论文写作**这四个方面进行评定。更加具体的评议项目参考如下：
 

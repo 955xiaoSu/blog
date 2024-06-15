@@ -24,6 +24,7 @@
 
 ## Life
 
+* [法律学习初体验](life/fa-lv-xue-xi-chu-ti-yan.md)
 * [悟已往之不谏 知来者之可追](life/wu-yi-wang-zhi-bu-jian-zhi-lai-zhe-zhi-ke-zhui.md)
 * [在自训队，是一种什么样的体验](life/zai-zi-xun-dui-shi-yi-zhong-shi-mo-yang-de-ti-yan.md)
 * [支教](life/zhi-jiao.md)
