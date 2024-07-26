@@ -52,21 +52,21 @@
 
 作为库文件引入使用示例：
 
-<figure><img src="../.gitbook/assets/image (3) (1) (1) (1) (1) (1).png" alt="" width="563"><figcaption></figcaption></figure>
+<figure><img src="../.gitbook/assets/image (3) (1) (1) (1) (1) (1) (1).png" alt="" width="563"><figcaption></figcaption></figure>
 
 在线修改 demo 使用示例：
 
-<figure><img src="../.gitbook/assets/image (4) (1) (1).png" alt="" width="563"><figcaption></figcaption></figure>
+<figure><img src="../.gitbook/assets/image (4) (1) (1) (1).png" alt="" width="563"><figcaption></figcaption></figure>
 
 Echarts离线部署方案：
 
 1.  官网定制下载插件代码，再使用U盘 / 光盘拷贝至目的主机；\
 
 
-    <figure><img src="../.gitbook/assets/image (5) (1) (1).png" alt=""><figcaption></figcaption></figure>
+    <figure><img src="../.gitbook/assets/image (5) (1) (1) (1).png" alt=""><figcaption></figcaption></figure>
 2. 从 github 上拉取源码后，使用 cnpm 安装相应依赖。依靠 npm 可以提供内网服务，也可以引用 `/echarts/dist` 中的 js 文件进行二次开发。
 
-<figure><img src="../.gitbook/assets/image (6) (1).png" alt="" width="563"><figcaption></figcaption></figure>
+<figure><img src="../.gitbook/assets/image (6) (1) (1).png" alt="" width="563"><figcaption></figcaption></figure>
 
 <figure><img src="../.gitbook/assets/image (8) (1).png" alt="" width="411"><figcaption></figcaption></figure>
 
