@@ -320,7 +320,7 @@ Ariel Futoransky，deattack.c，整数溢出导致越界写
 
 ### Practice
 
-### Lab 1
+#### Lab 1
 
 > So, we have **512 bytes of data, 16 bytes of stack frame to zero out, and 4 bytes for PC**. That means **532 bytes total**.
 
@@ -333,7 +333,7 @@ Ariel Futoransky，deattack.c，整数溢出导致越界写
 
 <figure><img src="../.gitbook/assets/image (5).png" alt=""><figcaption></figcaption></figure>
 
-### Lab 2
+#### Lab 2
 
 参考资料：
 
