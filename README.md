@@ -36,6 +36,6 @@ HNU 在读本科生，由理性支配大脑，向往感性生活的 INFJ
 **Welcome to contact me,**
 
 * [Github](https://github.com/955xiaoSu)，记录自己写的一些小玩意儿
-* 下方是旅游的足迹，若有足迹之外的有趣 city 推荐，欢迎邮件联系呀：[kaisuping@gmail.com](mailto:kaisuping@gmail.com)
+* 下方是旅游足迹，若有足迹之外的有趣 city 推荐，欢迎邮件联系呀：[kaisuping@gmail.com](mailto:kaisuping@gmail.com)
 
-<figure><img src=".gitbook/assets/image (2) (1).png" alt="" width="357"><figcaption></figcaption></figure>
+<figure><img src=".gitbook/assets/image (1).png" alt="" width="375"><figcaption><p>标红为下一次旅游备选 city</p></figcaption></figure>

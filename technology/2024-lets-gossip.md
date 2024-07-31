@@ -59,7 +59,7 @@ Arm 提供了一种新颖的 debug 方式：Inter-processor Debugging，可以�
 
 <figure><img src="../.gitbook/assets/4213e3e9a7882ad299001ca7d627f0b.jpg" alt="" width="188"><figcaption></figcaption></figure>
 
-<figure><img src="../.gitbook/assets/image.png" alt="" width="375"><figcaption></figcaption></figure>
+<figure><img src="../.gitbook/assets/image (2).png" alt="" width="375"><figcaption></figcaption></figure>
 
 通过查阅树莓派相关网站和自带的纸质手册，才弄懂应该怎么插 SD 卡（被自己又菜到了hhh
 
@@ -69,7 +69,7 @@ Arm 提供了一种新颖的 debug 方式：Inter-processor Debugging，可以�
 
 <figure><img src="../.gitbook/assets/image (3).png" alt="" width="375"><figcaption></figcaption></figure>
 
-<figure><img src="../.gitbook/assets/image (1).png" alt="" width="375"><figcaption></figcaption></figure>
+<figure><img src="../.gitbook/assets/image (1) (1).png" alt="" width="375"><figcaption></figcaption></figure>
 
 安装驱动：
 
