@@ -5,6 +5,7 @@
 
 ## Technology
 
+* [os折腾——Arch & Win11 双系统](technology/os-zhe-teng-arch-win11-shuang-xi-tong.md)
 * [2024 Let's GoSSIP](technology/2024-lets-gossip.md)
 * [固件仿真](technology/gu-jian-fang-zhen.md)
 * [安全随笔——安全到底是什么](technology/an-quan-sui-bi-an-quan-dao-di-shi-shi-mo.md)
