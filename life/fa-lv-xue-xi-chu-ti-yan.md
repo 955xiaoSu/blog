@@ -20,7 +20,7 @@ description: 本学期笔者出于培养自身法律观念的目的，选修了�
 
 <figure><img src="../.gitbook/assets/image (6).png" alt=""><figcaption><p>獬豸</p></figcaption></figure>
 
-<figure><img src="../.gitbook/assets/image (1) (1) (1).png" alt=""><figcaption><p>正义女神</p></figcaption></figure>
+<figure><img src="../.gitbook/assets/image (1) (1) (1) (1).png" alt=""><figcaption><p>正义女神</p></figcaption></figure>
 
 ## 劳动法
 
