@@ -148,6 +148,8 @@
 
 考虑到 512GB 分配给三个 os 实在是过于憋屈，于是购买 PSSD 装 NixOS。得益于 Nix 严谨的计算，NixOS 的安装确实简单，只要能搞定配置文件就搞定了一切。当然「搞定」说得简单，事实上嘛，你试试就知道了🤭
 
+<figure><img src="../.gitbook/assets/281070379FEF6D7DC60738C115F5979D.png" alt="" width="375"><figcaption></figcaption></figure>
+
 {% embed url="https://github.com/955xiaoSu/NixOS/tree/main" %}
 笔者的 Nix 配置文件
 {% endembed %}
