@@ -56,7 +56,7 @@ description: >-
 
 关于如何使用 CWE 的经验参考：
 
-* [https://cwe.mitre.org/about/user\_stories.html#Security\_Architect](https://cwe.mitre.org/about/user\_stories.html#Security\_Architect)
+* [https://cwe.mitre.org/about/user\_stories.html#Security\_Architect](https://cwe.mitre.org/about/user_stories.html#Security_Architect)
 
 根据 New\_to\_CWE 的建议，我们可以先去搜索“CWE-798: Use of Hard-coded Credentials“该示例来了解 CWE 能为我们提供怎样的信息。
 
@@ -226,7 +226,7 @@ ROPgadget --binary ./libuClibc-0.9.33.3-git.so --only "mov|pop" | grep "pc" | gr
 测试框架：
 
 * 文本协议：[Sulley](https://github.com/OpenRCE/sulley) → Boofuzz
-  * Sulley 对新用户友好，特色是_“Sulley not only has impressive data generation but has taken this a step further and includes many other important aspects a modern fuzzer should provide. ”_
+  * Sulley 对新用户友好，特色&#x662F;_“Sulley not only has impressive data generation but has taken this a step further and includes many other important aspects a modern fuzzer should provide. ”_
 * 二进制协议：[kitty](https://github.com/cisco-sas/kitty)
 
 测试思路：发送请求 → 对目标设备监控和配置设备重启机制 → fuzz
@@ -234,7 +234,7 @@ ROPgadget --binary ./libuClibc-0.9.33.3-git.so --only "mov|pop" | grep "pc" | gr
 boofuzz 学习：
 
 * [quickstart](https://boofuzz.readthedocs.io/en/stable/user/quickstart.html) 提供了两个基本的例子：ftp + http，基本的想法是启动对应的服务，然后用相关 .py 脚本进行爆破（先规定好对应协议的字段），而后的结果存储在 ./boofuzz-results/\<run-\*.db>，可以用 boo open ./\<run-\*.db> 查看历史 log
-* boofuzz 源码：[https://boofuzz.readthedocs.io/en/stable/\_modules/boofuzz.html](https://boofuzz.readthedocs.io/en/stable/\_modules/boofuzz.html)
+* boofuzz 源码：[https://boofuzz.readthedocs.io/en/stable/\_modules/boofuzz.html](https://boofuzz.readthedocs.io/en/stable/_modules/boofuzz.html)
 * 对于 boofuzz 更加深入的学习：[https://www.iotsec-zone.com/article/322](https://www.iotsec-zone.com/article/322)
 
 ![descript](<../.gitbook/assets/0 (1).png>)
@@ -300,7 +300,7 @@ sudo ifconfig br0 192.168.2.3/24
 
 参考资料：
 
-* [https://bbs.kanxue.com/thread-278240.htm#msg\_header\_h1\_2](https://bbs.kanxue.com/thread-278240.htm#msg\_header\_h1\_2)
+* [https://bbs.kanxue.com/thread-278240.htm#msg\_header\_h1\_2](https://bbs.kanxue.com/thread-278240.htm#msg_header_h1_2)
 
 Cisco RV340，RV340W，RV345 和 RV345P 四款型号的路由器中最新固件均存在一个未授权任意文件上传漏洞 （且目前尚未修复），攻击者可以在未授权的情况下将文件上传到 /tmp/upload 目录中，然后利用 upload.cgi 程序中存在的漏洞，最终造成存储型 XSS 攻击。
 
@@ -323,7 +323,7 @@ Acquire::AllowDowngradeToInsecureRepositories "true";
 
 为了软链接指向的正确性，利用 [https://github.com/nlitsme/ubidump/blob/master/ubidump.py](https://github.com/nlitsme/ubidump/blob/master/ubidump.py) 脚本在路径 _\_RV34X-v1.0.03.29-2022-10-17-13-45-34-PM.img.extracted/\_40.extracted/\_fw.gz.extracted/\_0.extracted/\_openwrt-comcerto2000-hgw-rootfs-ubi\_nand.img.extracted/_ 下提取 0.ubi，获得文件系统 rootfs。
 
-接下来构造网络通信环境，首先学习网桥的概念：[网桥技术介绍](https://www.h3c.com/cn/d\_200805/605742\_30003\_0.htm)
+接下来构造网络通信环境，首先学习网桥的概念：[网桥技术介绍](https://www.h3c.com/cn/d_200805/605742_30003_0.htm)
 
 kali 自带的 ip 命令还是不够方便，转而通过 apt install bridge-utils 安装 brctl 包，然而遇到了 tap0 网卡无法从 DOWN -> UP 的玄学问题，转战到 archlinux 进行仿真，顺便熟悉一下 archlinux😎然而 archlinux 的 binwalk 解压直接爆炸，转战熟悉的 ubuntu22.04 继续尝试😭
 
@@ -354,7 +354,7 @@ generate_default_cert
 
 参考资料：
 
-* [https://xz.aliyun.com/t/13688?time\_\_1311=mqmxnQ0Qeq0Dlxx2DUrUAodZiPD\&alichlgref=https%3A%2F%2Fxz.aliyun.com%2Fnode%2F18](https://xz.aliyun.com/t/13688?time\_\_1311=mqmxnQ0Qeq0Dlxx2DUrUAodZiPD\&alichlgref=https%3A%2F%2Fxz.aliyun.com%2Fnode%2F18)
+* [https://xz.aliyun.com/t/13688?time\_\_1311=mqmxnQ0Qeq0Dlxx2DUrUAodZiPD\&alichlgref=https%3A%2F%2Fxz.aliyun.com%2Fnode%2F18](https://xz.aliyun.com/t/13688?time__1311=mqmxnQ0Qeq0Dlxx2DUrUAodZiPD\&alichlgref=https%3A%2F%2Fxz.aliyun.com%2Fnode%2F18)
 
 > An issue in **TOTOLINK A3700R v.9.1.2u.6165\_20211012** allows a remote attacker to execute arbitrary code via the **FileName parameter** of the UploadFirmwareFile function.
 
@@ -444,7 +444,7 @@ zyinit: ELF 32-bit MSB executable, MIPS, N32 MIPS64 rel2 version 1 (SYSV), stati
 
 根据查到的文件属性，下载 mips 架构的 kernel 镜像以及文件系统。
 
-访问 [https://people.debian.org/\~aurel32/qemu/mips/](https://people.debian.org/\~aurel32/qemu/mips/) 后，可以看到有四个不同的 kernel 镜像以及两个不同的文件系统，该如何确认应用哪个呢？
+访问 [https://people.debian.org/\~aurel32/qemu/mips/](https://people.debian.org/~aurel32/qemu/mips/) 后，可以看到有四个不同的 kernel 镜像以及两个不同的文件系统，该如何确认应用哪个呢？
 
 * 通过 Linux 源码版本，即上述文件属性中“GNU/Linux 2.6.9”，可以排除一半 kernel 镜像，至于是 4kc 还是 5kc 版本，只能通过测试 qemu 能否正常启动来判定。
 * 文件系统 squeeze 和 wheezy 分别对应 Debian6.0、Debian7。具体应该使用哪个，也只能通过尝试来确定。
@@ -546,7 +546,7 @@ scp: Connection closed
 
 ![](<../.gitbook/assets/6 (1) (1).png>)
 
-思考是不是因为 factory 不包含相应的文件，于是下载 sysupgrade 尝试解包，成功解出 fs，但是碰上链接被重定向至 /dev/null 的问题。参考 [link](https://bbs.kanxue.com/thread-278240.htm#msg\_header\_h1\_2) 解决（git clone 后修改 extractor.py），如果 python 版本过高如 3.12，会报找不到 imp 包的错误，将包全部修改为 importlib.util 解决（ps，conda 没办法直接配置 3.3 版本的 python）。
+思考是不是因为 factory 不包含相应的文件，于是下载 sysupgrade 尝试解包，成功解出 fs，但是碰上链接被重定向至 /dev/null 的问题。参考 [link](https://bbs.kanxue.com/thread-278240.htm#msg_header_h1_2) 解决（git clone 后修改 extractor.py），如果 python 版本过高如 3.12，会报找不到 imp 包的错误，将包全部修改为 importlib.util 解决（ps，conda 没办法直接配置 3.3 版本的 python）。
 
 上 openwrt.org 检索镜像区别的结果如下：
 

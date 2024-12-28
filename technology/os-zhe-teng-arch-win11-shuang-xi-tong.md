@@ -102,7 +102,7 @@
 
 <figure><img src="../.gitbook/assets/1AF9F97BD115826180E919C7BF393EC9.png" alt="" width="563"><figcaption><p>看到 FAILED 是在 mount /boot 时发生的 </p></figcaption></figure>
 
-后续查看日志了解到，进入到 emergency shell 的原因是**「Superblock checksum does not match superblock while trying to open /dev/nvme0n1p7」**。这是个什么鬼？了解了一下 mount 的过程：从 userspace 发起 mount 请求 → kernel mount() 接口 → 创建 fs 上下文，添加 suplerblock，校验 fs 上下文，将上下文信息传递到 VFS，并保存挂载信息到 `/etc/mtab` 与 `/proc/mounts`（`/etc/mtab` 是 `/proc/self/mounts` 软链接，而 `/proc/self/mounts` 与 `/proc/mounts` 文件内容是相同的）。
+后续查看日志了解到，进入到 emergency shell 的原因&#x662F;**「Superblock checksum does not match superblock while trying to open /dev/nvme0n1p7」**。这是个什么鬼？了解了一下 mount 的过程：从 userspace 发起 mount 请求 → kernel mount() 接口 → 创建 fs 上下文，添加 suplerblock，校验 fs 上下文，将上下文信息传递到 VFS，并保存挂载信息到 `/etc/mtab` 与 `/proc/mounts`（`/etc/mtab` 是 `/proc/self/mounts` 软链接，而 `/proc/self/mounts` 与 `/proc/mounts` 文件内容是相同的）。
 
 看来 checksum 不匹配是在校验 fs 上下文阶段发生的错误，上 archwiki 检索一下，有两种修复说法：
 
@@ -117,13 +117,13 @@
 
 对于第二种说法，笔者使用的是据说已修复 bug 的 ext2fsd 0.69 版本，所以没多大参考价值。加上笔者使用的 filesystem format 是 ext4，并不是支持快照回滚的 btrfs，同时没有备份系统镜像文件，可谓回天乏术，思来想去，除了重装别无他路。哎，人生啊～
 
-在重装之前，非常让笔者纠结的一件事情是：怎么抢救 Arch 上最新的笔记？如果笔记无法抢救，那么重写笔记又是一笔巨大的时间开销。抓耳挠腮之际，想起一位大佬，打开 vx 深夜咨询，在大佬的提醒下，重启在 win 上吃灰已久的 DiskGenius！DiskGenius 没有辜负信赖！只需选中对应磁盘分区（分区是否损坏并没有影响），右键选择**「已删除或格式化后的文件恢复」**，静等两分钟，惊喜的一幕就诞生了！！
+在重装之前，非常让笔者纠结的一件事情是：怎么抢救 Arch 上最新的笔记？如果笔记无法抢救，那么重写笔记又是一笔巨大的时间开销。抓耳挠腮之际，想起一位大佬，打开 vx 深夜咨询，在大佬的提醒下，重启在 win 上吃灰已久的 DiskGenius！DiskGenius 没有辜负信赖！只需选中对应磁盘分区（分区是否损坏并没有影响），右键选&#x62E9;**「已删除或格式化后的文件恢复」**，静等两分钟，惊喜的一幕就诞生了！！
 
 <figure><img src="../.gitbook/assets/1F7A40967727BB736A9A506C5C552C30.png" alt="" width="375"><figcaption><p>DiskGenius 为什么是神！</p></figcaption></figure>
 
 看到众多笔记、文件浮现在眼前，老泪众横，紧急备份后上床安稳睡觉，这一夜睡得香甜🎑
 
-次日早晨复盘本次事故的 root cause，想来并不是分辨率配置文件导致的，**而是在更新了 firmware 和 linux 之后，没有第一时间重启，而是仅重启了 desktop manager**。为什么更新 firmware 和 linux 后最保险的做法是立即重启呢？笔者并没有找到非常可信的说法，只在 archwiki 上看到有人闲聊：[新手问一个问题，arch 可以 每日滚动更新，但每周只重启一次吗？](https://bbs-archlinuxcn-org.translate.goog/viewtopic.php?id=12989&\_x\_tr\_sl=zh-CN&\_x\_tr\_tl=en&\_x\_tr\_hl=en&\_x\_tr\_pto=sc)
+次日早晨复盘本次事故的 root cause，想来并不是分辨率配置文件导致的，**而是在更新了 firmware 和 linux 之后，没有第一时间重启，而是仅重启了 desktop manager**。为什么更新 firmware 和 linux 后最保险的做法是立即重启呢？笔者并没有找到非常可信的说法，只在 archwiki 上看到有人闲聊：[新手问一个问题，arch 可以 每日滚动更新，但每周只重启一次吗？](https://bbs-archlinuxcn-org.translate.goog/viewtopic.php?id=12989&_x_tr_sl=zh-CN&_x_tr_tl=en&_x_tr_hl=en&_x_tr_pto=sc)
 
 以及在[系统维护](https://wiki.archlinuxcn.org/zh/%E7%B3%BB%E7%BB%9F%E7%BB%B4%E6%8A%A4)中提到的：
 

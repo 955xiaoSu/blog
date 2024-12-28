@@ -18,7 +18,7 @@
 
 ChatGPT 基于机器学习去产生 human-like text，换句话说，它是根据预训练的结果，结合概率去生成一段文本，实质上是 **token simulation**。其训练模式是：无监督学习（囫囵吞枣式学习预测，开销巨大，占据超过 99% 的训练时长） → 有监督学习（给模板说话） → 强化学习（人工微调）。
 
-根据 Andrej Karpathy 在 Microsoft Build 2023 上的[演讲](https://www.bilibili.com/video/BV1X24y1A7Rz/?spm\_id\_from=333.1007.top\_right\_bar\_window\_history.content.click\&vd\_source=68401e073d6cf69f6f72f1ad56c67eaf)，ChatGPT 的一些细节以 slides 的形式展示如下：
+根据 Andrej Karpathy 在 Microsoft Build 2023 上的[演讲](https://www.bilibili.com/video/BV1X24y1A7Rz/?spm_id_from=333.1007.top_right_bar_window_history.content.click\&vd_source=68401e073d6cf69f6f72f1ad56c67eaf)，ChatGPT 的一些细节以 slides 的形式展示如下：
 
 GPT 训练过程
 
@@ -76,7 +76,7 @@ ChatGPT 以及一系列大模型的接踵而至，笔者认为可以看作是 AI
 为了更好地使用 AI，不妨学习一下吴恩达与 OpenAI 联合推出的 prompt 教学：\
 [https://learn.deeplearning.ai/chatgpt-prompt-eng/lesson/1/introduction](https://learn.deeplearning.ai/chatgpt-prompt-eng/lesson/1/introduction)。
 
-笔者学习之后，总结写 prompt 的两个 trick：**1.简洁；2.明确。**另外，在使用的时候可根据"Do Anything Now"原则，尝试让 ChatGPT 进行 roleplay，以获得更高质量的回答。也可以尝试分段描述你的要求，降低对 GPT 的推理强度要求，以获得更为准确的回答。
+笔者学习之后，总结写 prompt 的两个 trick：**1.简洁；2.明确。**&#x53E6;外，在使用的时候可根据"Do Anything Now"原则，尝试让 ChatGPT 进行 roleplay，以获得更高质量的回答。也可以尝试分段描述你的要求，降低对 GPT 的推理强度要求，以获得更为准确的回答。
 
 同时推荐阅读顶级华裔科学家陆奇最新的[演讲实录](https://wallstreetcn.com/articles/3687254)，能加深对当今大模型世界的理解。有一句话让笔者受益匪浅：
 

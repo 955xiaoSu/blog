@@ -26,11 +26,12 @@
 
 ## Life
 
+* [路在脚下](life/lu-zai-jiao-xia.md)
 * [法律学习初体验](life/fa-lv-xue-xi-chu-ti-yan.md)
 * [悟已往之不谏 知来者之可追](life/wu-yi-wang-zhi-bu-jian-zhi-lai-zhe-zhi-ke-zhui.md)
 * [在自训队，是一种什么样的体验](life/zai-zi-xun-dui-shi-yi-zhong-shi-mo-yang-de-ti-yan.md)
 * [支教](life/zhi-jiao.md)
-* [A passion for difficultand novel problems](life/a-passion-for-difficultand-novel-problems.md)
+* [A passion for difficult and novel problems](life/a-passion-for-difficultand-novel-problems.md)
 * [2022，我的年度总结](life/2022-wo-de-nian-du-zong-jie.md)
 * [1.21 大年三十](life/1.21-da-nian-san-shi.md)
 * [1.20 打工日记](life/1.20-da-gong-ri-ji.md)

@@ -6,7 +6,7 @@
 
 ### 背景与前人工作
 
-1day 存在的根本原因是**从漏洞发布到补丁应用的时间差。**1day 相较于 0day 的特殊之处在于每个人都能通过漏洞发布得知漏洞的存在，这使得 1day 的利用比 0day 更加容易。为了对抗 1day 带来的威胁，现有两种解决方案：
+1day 存在的根本原因是**从漏洞发布到补丁应用的时间差。**&#x31;day 相较于 0day 的特殊之处在于每个人都能通过漏洞发布得知漏洞的存在，这使得 1day 的利用比 0day 更加容易。为了对抗 1day 带来的威胁，现有两种解决方案：
 
 1. 应用 patch；
 2. 在软件供应链中，从系统或网络层面扫描 1day。
@@ -26,7 +26,7 @@
 
 #### 解决子问题 1
 
-现存 AI 无法识别细粒度的 patch，故解决子问题 1 时不考虑_（3）AI-based binary diffing_。
+现存 AI 无法识别细粒度的 patch，故解决子问题 1 时不考&#x8651;_（3）AI-based binary diffing_。
 
 为了探究如何定位并识别 patch 的问题，作者研究了 1031个 patches 后指出，patch 独特且常见的特征是 **trailing call sequences (TCS)**，其定义与分类如下：
 
@@ -40,7 +40,7 @@
 
 #### 解决子问题 2
 
-symbolic execution 无法解决大型 binary 的路径爆炸问题，故解决子问题 2 时不考虑_（1）symbolic execution_。
+symbolic execution 无法解决大型 binary 的路径爆炸问题，故解决子问题 2 时不考&#x8651;_（1）symbolic execution_。
 
 为了探究如何触发 patch 的问题，首先提出一种基于 TCS 的定向 metric：基本思路是衡量 distance(source function, target function)。函数之间的 distance 定义为 1 + 1 / (2+CN) （CN 是从 caller → callee，call sites 的数量）；找到 target function 的 dominator function（前置必经函数），将 distance(dominator function, target function) 定义为测试用例的 distance。
 

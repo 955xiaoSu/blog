@@ -20,7 +20,7 @@
 
 PDIFF 设计的关键在于比较：`similarity(downstream_binary, upstream_pre_patch)` 和`similarity(downstream_binary, upstream_post_patch)`。
 
-基本的想法也很通俗易懂，你不是让我确认是否存在某特定补丁吗，我就提出一个**距离（即 similarity）**的度量标准，去判断下游厂商的 binary 究竟是更靠近上游打补丁前还是打补丁后。如果更靠近打补丁后，就认为 binary 打上了补丁，反之则认为 binary 不存在特定补丁。
+基本的想法也很通俗易懂，你不是让我确认是否存在某特定补丁吗，我就提出一个**距离（即 similarity）**&#x7684;度量标准，去判断下游厂商的 binary 究竟是更靠近上游打补丁前还是打补丁后。如果更靠近打补丁后，就认为 binary 打上了补丁，反之则认为 binary 不存在特定补丁。
 
 PDIFF 分三步实现：
 
