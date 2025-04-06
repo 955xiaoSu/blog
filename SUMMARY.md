@@ -26,6 +26,7 @@
 
 ## Life
 
+* [一个悲观de乐观主义者的独白](life/yi-ge-bei-guan-de-le-guan-zhu-yi-zhe-de-du-bai.md)
 * [路在脚下](life/lu-zai-jiao-xia.md)
 * [法律学习初体验](life/fa-lv-xue-xi-chu-ti-yan.md)
 * [悟已往之不谏 知来者之可追](life/wu-yi-wang-zhi-bu-jian-zhi-lai-zhe-zhi-ke-zhui.md)
