@@ -1,3 +1,7 @@
+---
+hidden: true
+---
+
 # Great works are connected
 
 
