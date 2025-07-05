@@ -118,7 +118,7 @@ description: 笔者于 2025.06.25 前往东莞租房，于 06.28 在腾讯电子
 
 而后擦洗房屋每一处角落，包括电器开关、橱柜、桌椅、沙发、茶几、电视......擦洗过后，再用扫把扫一遍地，拖把拖一遍，至此亮堂且干干净净的房屋就收拾出来了，请看劳动成果！
 
-<figure><img src="../.gitbook/assets/FC9264206F1C3C78329A4DEBC5B7ECBF.png" alt="" width="375"><figcaption></figcaption></figure>
+<figure><img src="../.gitbook/assets/FC9264206F1C3C78329A4DEBC5B7ECBF.png" alt="" width="375"><figcaption><p>复旦一位妹子看到后第一句话“就缺个女主人。”</p></figcaption></figure>
 
 <figure><img src="../.gitbook/assets/6C5B1CAC0281FD2A993F6ECA6315C24F.png" alt="" width="375"><figcaption></figcaption></figure>
 
