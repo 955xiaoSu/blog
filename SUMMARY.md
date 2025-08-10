@@ -1,3 +1,3 @@
 # Table of contents
 
-* [Weekl](README.md)
+* [Weekly](README.md)
