@@ -69,7 +69,7 @@ Arm 提供了一种新颖的 debug 方式：Inter-processor Debugging，可以�
 
 <figure><img src="../.gitbook/assets/image (3).png" alt="" width="375"><figcaption></figcaption></figure>
 
-<figure><img src="../.gitbook/assets/image (1) (1) (1).png" alt="" width="375"><figcaption></figcaption></figure>
+<figure><img src="../.gitbook/assets/image (1) (1) (1) (1).png" alt="" width="375"><figcaption></figcaption></figure>
 
 安装驱动：
 
@@ -89,10 +89,10 @@ Arm 提供了一种新颖的 debug 方式：Inter-processor Debugging，可以�
 
 参考资料：
 
-* [计算机组成与设计](https://reader.z-library.rs/?source=b94ae45977f755eb0a3c7693c278e9e5f02353b872e8d148eee2f9c9e0d20549\&download\_location=https%3A%2F%2Fz-library.rs%2Fdl%2F17022047%2F9e3811)
+* [计算机组成与设计](https://reader.z-library.rs/?source=b94ae45977f755eb0a3c7693c278e9e5f02353b872e8d148eee2f9c9e0d20549\&download_location=https%3A%2F%2Fz-library.rs%2Fdl%2F17022047%2F9e3811)
 * [《计算理论基础（第二版）》](https://github.com/QSCTech/zju-icicles/blob/master/%E8%AE%A1%E7%AE%97%E7%90%86%E8%AE%BA/%E6%95%99%E6%9D%90/%E8%AE%A1%E7%AE%97%E7%90%86%E8%AE%BA%E5%9F%BA%E7%A1%80%EF%BC%88%E7%AC%AC%E4%BA%8C%E7%89%88%EF%BC%89.pdf)
 * [一文详解卷积和逆卷积](https://theonegis.github.io/dl/%E4%B8%80%E6%96%87%E8%AF%A6%E8%A7%A3%E5%8D%B7%E7%A7%AF%E5%92%8C%E9%80%86%E5%8D%B7%E7%A7%AF/)
-* [卷积](https://paddlepedia.readthedocs.io/en/latest/tutorials/CNN/convolution\_operator/Convolution.html)
+* [卷积](https://paddlepedia.readthedocs.io/en/latest/tutorials/CNN/convolution_operator/Convolution.html)
 
 ### Background
 
@@ -124,7 +124,7 @@ Arm 提供了一种新颖的 debug 方式：Inter-processor Debugging，可以�
 
 卷积在数学上是两个变量在某范围内相乘后求和的结果
 
-![卷积运算](https://theonegis.github.io/images/ml/no\_padding\_no\_strides.gif)
+![卷积运算](https://theonegis.github.io/images/ml/no_padding_no_strides.gif)
 
 ```c
 // 一个极其简单的多通道卷积

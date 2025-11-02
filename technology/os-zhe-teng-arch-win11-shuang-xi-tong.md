@@ -77,9 +77,9 @@
     * grub：先保证确定能正常进入 Arch Linux 后，再利用 os-prober 等工具探测，再重新配置 `grub-mkconfig` 从而实现 Arch & Win11 正常引导
     * system-boot：为了能正常引导 win11 启动，目前笔者探索的一个可行方案是 cp 一个 `shell64.efi` 在 `/boot` 路径下，同时配置 `windows.nsh` 和 `windows.conf` 文件（之前看到一个教程在 `windows.conf` options 中添加了 `-noconsolein && -noconsoleout` 这俩个参数，这会导致在 win C盘 有 Bitlocker 加密的情况下，无法输入 Bitlocker 密钥验证）。`shell64.efi` 附在了本文最后。
 
-    <figure><img src="../.gitbook/assets/image (1).png" alt="" width="375"><figcaption><p>windows.nsh &#x26;&#x26; windows.conf</p></figcaption></figure>
+    <figure><img src="../.gitbook/assets/image (1) (1).png" alt="" width="375"><figcaption><p>windows.nsh &#x26;&#x26; windows.conf</p></figcaption></figure>
 
-    <figure><img src="../.gitbook/assets/image.png" alt="" width="375"><figcaption></figcaption></figure>
+    <figure><img src="../.gitbook/assets/image (1).png" alt="" width="375"><figcaption></figcaption></figure>
 5. 编译安装 yay  `makepkg -si` 时过于缓慢：
    * `export GO111MODULE=on && export GOPROXY=https://goproxy.cn`
 6. 输入法：
