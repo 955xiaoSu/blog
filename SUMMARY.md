@@ -5,6 +5,7 @@
 
 ## Technology
 
+* [Cortex-M 处理器调试](technology/cortexm-chu-li-qi-tiao-shi.md)
 * [os折腾——Arch & Win11 双系统](technology/os-zhe-teng-arch-win11-shuang-xi-tong.md)
 * [2024 Let's GoSSIP](technology/2024-lets-gossip.md)
 * [固件仿真](technology/gu-jian-fang-zhen.md)
