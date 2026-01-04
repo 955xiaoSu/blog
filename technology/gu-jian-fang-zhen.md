@@ -28,7 +28,7 @@ description: >-
 
 仿真过程中，难免与逆向打交道，因此逆向工具是不可或缺的。逆向工具推荐安装 ghidra 和 IDA Pro，关于这两个工具的安装网上有非常详细的教程，不再赘述。以下分享几点使用 ghidra 的 tips：
 
-![ghidra](<../.gitbook/assets/0 (2).png>)
+![ghidra](<../.gitbook/assets/0 (3).png>)
 
 第一手资料应参考：
 
@@ -42,15 +42,15 @@ description: >-
 
 注意在启动 ghidra 时本地是否开启了 18001 端口。若是通过 ghidraRun.bat 开启，应该是默认没有打开相关端口的，但不排除有其他打开该端口的途径，可以通过 netstat -ano | grep 18001 进行排查。
 
-![](<../.gitbook/assets/3 (2).png>)
+![](<../.gitbook/assets/3 (3).png>)
 
 通过 window → defined strings，相当于用 strings 扫描了一遍可执行程序，提取可读字符串，获取编译环境以及程序运行逻辑的信息
 
-<figure><img src="../.gitbook/assets/5 (2).png" alt=""><figcaption></figcaption></figure>
+<figure><img src="../.gitbook/assets/5 (3).png" alt=""><figcaption></figcaption></figure>
 
 除了逆向工具之外，binwalk 作为固件解包的利器也是必不可少的。binwalk 的安装方式有两种，一种是通过源直接获取，另一种是通过源代码编译安装，前者快捷方便，后者依赖齐全，读者可根据需要自行选择安装方式。
 
-![binwalk](<../.gitbook/assets/1 (2).png>)
+![binwalk](<../.gitbook/assets/1 (3).png>)
 
 在坐拥 ghidra、IDA Pro 与 binwalk 三大工具之后，接下来要干的事情是学会如何检索想要的固件。仿真的对象是一个具象的固件，而我们做安全的关心有漏洞的固件，因此检索有漏洞的固件就是我们的目标。漏洞信息从何获取呢？CVE + CWE 是一个可行的方案，以下是使用 CWE 的方法论：&#x20;
 
@@ -62,7 +62,7 @@ description: >-
 
 首先，CWE 提供了不同维度的信息呈现方式，个人认为选择 complete / custom 是比较有性价比的，前者提供完整的消息，后者提供定制化的消息。
 
-![](<../.gitbook/assets/6 (2).png>)
+![](<../.gitbook/assets/6 (3).png>)
 
 浏览完此示例后，可以总结 CWE 的基本构成为：
 
@@ -85,7 +85,7 @@ description: >-
 
 从 CWE-798 获取一个漏洞利用示例 CVE-2022-29953，并在 cve.org 中检索，获知受漏洞影响的厂商之一是 Bently Nevada，其产品系列是 3700，并得到一个参考链接。
 
-![](<../.gitbook/assets/7 (2).png>)
+![](<../.gitbook/assets/7 (3).png>)
 
 从链接中，我们可以获取漏洞影响的具体版本号。
 
@@ -428,13 +428,13 @@ curl http://127.0.0.1/cgi-bin/cstecgi.cgi -b "SESSION_ID=<YOUR_SESSION_ID>" -X P
 
 尝试直接用 binwalk 解包，解出来一堆 .zip && .7z，解包失败。（binwalk 记得加 -r 参数，自动 delete carved file，节省空间，避免 archlinux 爆炸）
 
-![](<../.gitbook/assets/0 (1) (1).png>)
+![](<../.gitbook/assets/0 (2).png>)
 
 参考文章的 bypass 思路是找 **\*.ri**，由于.ri文件通常用于恢复损坏的固件，它可能包含完整的系统映像，所以尝试分析 .ri 文件（攻击面的知识又增加了）。依据是来自官方 pdf 中对 .ri 文件功能的介绍 && Appendix3 Firmware Recovery（强调了别在更新期间做一些骚操作）。
 
-![](<../.gitbook/assets/1 (1) (1).png>)
+![](<../.gitbook/assets/1 (2).png>)
 
-![](<../.gitbook/assets/2 (1) (1).png>)
+![](<../.gitbook/assets/2 (2).png>)
 
 承上，继续解包 \*.ri，而后继续解包 240 文件（若解包 \*.ri 后得到的仅有 240.7z，那么对该文件解压缩即可）。观察发现存在 zyinit 文件，用 file 命令查看其文件属性。
 
@@ -519,13 +519,13 @@ scp: Connection closed
 
 最后在 archlinux 中用 binwalk 解包得到 squashfs！
 
-![](<../.gitbook/assets/3 (1) (1).png>)
+![](<../.gitbook/assets/3 (2).png>)
 
 在第二篇参考文章中，作者对 Zyxel ZyWALL Unified Security Gateway (USG) appliances 的固件逆向解包做了详细的说明。基本步骤同上，就不再浪费时间。有意思的一个思路是，可以用 strace + qemu-xxx-static 去观察 syscall 的情况，来验证解包思路的正确性。
 
 总结一下思路：直接解 .bin 发现遇到了强加密，无法直接解包。发现同路径下有关于文件功能说明的 .pdf，查阅 .pdf 之后发现 .ri 可以用来紧急启动，说明其内包含相关启动程序，遂用 binwalk 对其层层解包，浏览解包结果发现两个有意思的文件：zyinit 以及 zld\_fsextract。用 ghidra 一通分析 zld\_fsextract 可以得知其能绕过 unzip 过程中的密码，于是用 qemu 搭建系统仿真环境进行尝试。
 
-![](<../.gitbook/assets/4 (1) (1).png>)
+![](<../.gitbook/assets/4 (2).png>)
 
 ### OpenWrt
 
@@ -540,11 +540,11 @@ scp: Connection closed
 
 参考前面解决 binwalk 中 ubi\_reader 缺失的问题后，并没有解压出目标 fs，于是放弃更换另一个目标。
 
-![](<../.gitbook/assets/5 (1) (1).png>)
+![](<../.gitbook/assets/5 (2).png>)
 
 换了一个目标也是如此。
 
-![](<../.gitbook/assets/6 (1) (1).png>)
+![](<../.gitbook/assets/6 (2).png>)
 
 思考是不是因为 factory 不包含相应的文件，于是下载 sysupgrade 尝试解包，成功解出 fs，但是碰上链接被重定向至 /dev/null 的问题。参考 [link](https://bbs.kanxue.com/thread-278240.htm#msg_header_h1_2) 解决（git clone 后修改 extractor.py），如果 python 版本过高如 3.12，会报找不到 imp 包的错误，将包全部修改为 importlib.util 解决（ps，conda 没办法直接配置 3.3 版本的 python）。
 
@@ -556,7 +556,7 @@ scp: Connection closed
 
 简单来说：
 
-![](<../.gitbook/assets/7 (1) (1).png>)
+![](<../.gitbook/assets/7 (2).png>)
 
 ![](<../.gitbook/assets/8 (1).png>)
 

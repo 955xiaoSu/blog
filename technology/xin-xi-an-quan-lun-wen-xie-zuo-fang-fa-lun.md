@@ -8,7 +8,7 @@
 
 学士、硕士与博士是高等教育的三个不同阶段，但该体系并非一成不变的。在最初，高等教育体系中只有学士与博士两个阶段，然而人们发现对于博士的要求过于苛刻，以至于许多人都无法毕业（至今仍是如此），于是引入了硕士（苏联还引入了“[副博士](https://zh.wikipedia.org/wiki/%E5%89%AF%E5%8D%9A%E5%A3%AB%E5%AD%A6%E4%BD%8D)”）阶段。至此才演化到如今中西方普遍采用的“学士—硕士—博士”这样的高等教育体系。
 
-<figure><img src="../.gitbook/assets/image (2) (1) (1) (1) (1).png" alt=""><figcaption><p>学位体系</p></figcaption></figure>
+<figure><img src="../.gitbook/assets/image (16).png" alt=""><figcaption><p>学位体系</p></figcaption></figure>
 
 高等教育体系对不同阶段的学习者提出了不同的能力要求，可简单概括如下：
 
@@ -57,9 +57,9 @@
 
 为了建立对某领域全面的认知，必须阅读大量相关论文，如何组织大量论文的存储，就需要工具加以辅助。秉承“免费、好用”的基本原则，找到了 [Zotero](https://www.zotero.org/) 这款论文管理工具。
 
-<figure><img src="../.gitbook/assets/image (43).png" alt=""><figcaption><p>Zotero 界面1</p></figcaption></figure>
+<figure><img src="../.gitbook/assets/image (96).png" alt=""><figcaption><p>Zotero 界面1</p></figcaption></figure>
 
-<figure><img src="../.gitbook/assets/image (42).png" alt=""><figcaption><p>Zotero 界面2</p></figcaption></figure>
+<figure><img src="../.gitbook/assets/image (95).png" alt=""><figcaption><p>Zotero 界面2</p></figcaption></figure>
 
 ### **Zotero 使用方法**
 
@@ -98,7 +98,7 @@ Zotero 的相关资料非常丰富，这里不再赘述，直接给出相应的�
 
 答案是[Overleaf](https://en.wikipedia.org/wiki/Overleaf)。
 
-<figure><img src="../.gitbook/assets/image (46).png" alt=""><figcaption></figcaption></figure>
+<figure><img src="../.gitbook/assets/image (99).png" alt=""><figcaption></figcaption></figure>
 
 Overleaf 是一种在线协作科学文档写作和发布工具，它基于 LaTeX，一个广泛使用的文档排版系统，特别适用于复杂的数学公式和科学文档。以下是关于 Overleaf 的详细介绍：
 
@@ -226,7 +226,7 @@ Review ∈ Critique，一般而言由以下两个部分组成：
 
 训练“标题、摘要与引言”这三部分的写作能力，可以将已发表论文的相应部分遮挡，自行阅读论文其他部分后撰写，再与原作者所写进行比对。
 
-<figure><img src="../.gitbook/assets/image (45).png" alt=""><figcaption></figcaption></figure>
+<figure><img src="../.gitbook/assets/image (98).png" alt=""><figcaption></figcaption></figure>
 
 学习完“标题、摘要与引言”这三部分的写作，《信息安全论文写作》课程就进入尾声了。课程的最后，肖老师告诉我们：
 
@@ -236,15 +236,15 @@ Review ∈ Critique，一般而言由以下两个部分组成：
 
 这里贴一张结课的大作业（主要是形式，内容都是 gpt 写的🤣）。
 
-<figure><img src="../.gitbook/assets/image (47).png" alt=""><figcaption></figcaption></figure>
+<figure><img src="../.gitbook/assets/image (100).png" alt=""><figcaption></figcaption></figure>
 
 ## 论文投稿与评审
 
 论文写作后，需要投稿到相应的期刊 / 会议，由同行专家进行评审，审查论文质量是否合格，并决定论文能否发表。以下分享两张有关投稿与评审的截图。
 
-<figure><img src="../.gitbook/assets/image (1) (1) (1) (1) (1) (1).png" alt=""><figcaption></figcaption></figure>
+<figure><img src="../.gitbook/assets/image (14).png" alt=""><figcaption></figcaption></figure>
 
-<figure><img src="../.gitbook/assets/image (1) (1) (1) (1) (1) (1) (1).png" alt=""><figcaption></figcaption></figure>
+<figure><img src="../.gitbook/assets/image (15).png" alt=""><figcaption></figcaption></figure>
 
 国内对于论文的评审是等级制，对论文的**选题、文献综述、研究成果、论文写作**这四个方面进行评定。更加具体的评议项目参考如下：
 

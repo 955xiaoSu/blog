@@ -1,6 +1,6 @@
 # 浪漫的中国酒文化
 
-<figure><img src="../.gitbook/assets/image (10) (1).png" alt=""><figcaption></figcaption></figure>
+<figure><img src="../.gitbook/assets/image (50).png" alt=""><figcaption></figcaption></figure>
 
 酒不醉人人自醉
 

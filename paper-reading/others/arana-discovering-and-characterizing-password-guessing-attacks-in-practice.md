@@ -13,21 +13,21 @@
 
     * 首先通过 Gossamer 收集登录日志，以如下格式提取信息；
 
-    <figure><img src="../../.gitbook/assets/image (21).png" alt=""><figcaption></figcaption></figure>
+    <figure><img src="../../.gitbook/assets/image (74).png" alt=""><figcaption></figcaption></figure>
 
     * 基于“恶意登录只占少数、恶意登录大多数情况下会失败、恶意登录是通过脚本控制且 ip 来自于 proxy server”的三点假设，以 **NR** 与 **FF** 为度量，根据实验事实，选取 thresholds 过滤 benign behavior，将剩余的 malicious L sets 作为下一步的研究对象；
 
-    <figure><img src="../../.gitbook/assets/image (22).png" alt=""><figcaption></figcaption></figure>
+    <figure><img src="../../.gitbook/assets/image (75).png" alt=""><figcaption></figcaption></figure>
 
     * 选取 nominal features IP, ISP, UA, and DATE ，设计 normalized difference，denoted as ND(x,y)=|x-y|/(x+y) 作为 clustering 的依据。当两个 cluster 的距离小于通过 knee locator method 选出的 threshold，便将这两个 cluster 归为一类；
 
-    <figure><img src="../../.gitbook/assets/image (23).png" alt=""><figcaption></figcaption></figure>
+    <figure><img src="../../.gitbook/assets/image (76).png" alt=""><figcaption></figcaption></figure>
 
     * 通过发起攻击的时空统计特征，将攻击分成 29 类。再通过“Type of username password pairs”和“Delivery of requests”实现对 attack campaigns 更高程度的抽象。
 
 
 
-    <figure><img src="../../.gitbook/assets/image (24).png" alt=""><figcaption></figcaption></figure>
+    <figure><img src="../../.gitbook/assets/image (77).png" alt=""><figcaption></figcaption></figure>
 *   Suggestions
 
     * 针对此类攻击，并没有太好的解决办法，因此作者只泛泛地描述了如下的防御策略：

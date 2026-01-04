@@ -4,7 +4,7 @@ description: 笔者于 2025.06.25 前往东莞租房，于 06.28 在腾讯电子
 
 # 年轻人的第一次租房
 
-<figure><img src="../.gitbook/assets/image (58).png" alt="" width="344"><figcaption><p>最终租赁房屋的阳台风景</p></figcaption></figure>
+<figure><img src="../.gitbook/assets/image (111).png" alt="" width="344"><figcaption><p>最终租赁房屋的阳台风景</p></figcaption></figure>
 
 ## 前期准备
 
@@ -130,4 +130,4 @@ description: 笔者于 2025.06.25 前往东莞租房，于 06.28 在腾讯电子
 
 邓公曾言：“社会是最好的大学。” 此次顺利租房，也算是笔者迈入这所“大学”的正式报到。期待社会大学的第一课～
 
-\
+<br>

@@ -33,17 +33,17 @@ ps，相关通知均在“**安全研究GoSSIP**”微信公众号上发布（�
 
 EL3 作为状态过渡的桥梁
 
-<figure><img src="../.gitbook/assets/image (49).png" alt="" width="375"><figcaption></figcaption></figure>
+<figure><img src="../.gitbook/assets/image (102).png" alt="" width="375"><figcaption></figcaption></figure>
 
 打破权限隔离的方法是**滥用调试接口**（ps，high-level 来说 debug 分为入侵与非入侵两种，入侵意味着可以中断 / 控制调试目标）
 
-<figure><img src="../.gitbook/assets/image (50).png" alt="" width="375"><figcaption></figcaption></figure>
+<figure><img src="../.gitbook/assets/image (103).png" alt="" width="375"><figcaption></figcaption></figure>
 
 Arm debug designer 认为被调试状态下的 TARGET 从低权限提权到高权限是一个合法的行为，或者说 designer suppose 这不是 arm 该管的事，应该是 SoC 该管的事（前提，调试 HOST 需要具备 EL1 权限）
 
-<figure><img src="../.gitbook/assets/image (51).png" alt="" width="375"><figcaption></figcaption></figure>
+<figure><img src="../.gitbook/assets/image (104).png" alt="" width="375"><figcaption></figcaption></figure>
 
-<figure><img src="../.gitbook/assets/image (52).png" alt="" width="375"><figcaption></figcaption></figure>
+<figure><img src="../.gitbook/assets/image (105).png" alt="" width="375"><figcaption></figcaption></figure>
 
 Arm 提供了一种新颖的 debug 方式：Inter-processor Debugging，可以绕过物理接触（类似找旁站），就不需要 JTAG，但要求必须能控制多核设备中的**某一个核**（这个前提似乎有点苛刻？）
 
@@ -59,7 +59,7 @@ Arm 提供了一种新颖的 debug 方式：Inter-processor Debugging，可以�
 
 <figure><img src="../.gitbook/assets/4213e3e9a7882ad299001ca7d627f0b.jpg" alt="" width="188"><figcaption></figcaption></figure>
 
-<figure><img src="../.gitbook/assets/image (2) (1).png" alt="" width="375"><figcaption></figcaption></figure>
+<figure><img src="../.gitbook/assets/image (5).png" alt="" width="375"><figcaption></figcaption></figure>
 
 通过查阅树莓派相关网站和自带的纸质手册，才弄懂应该怎么插 SD 卡（被自己又菜到了hhh
 
@@ -67,13 +67,13 @@ Arm 提供了一种新颖的 debug 方式：Inter-processor Debugging，可以�
 
 根据指导与配图，进行连线
 
-<figure><img src="../.gitbook/assets/image (3).png" alt="" width="375"><figcaption></figcaption></figure>
+<figure><img src="../.gitbook/assets/image (8).png" alt="" width="375"><figcaption></figcaption></figure>
 
-<figure><img src="../.gitbook/assets/image (1) (1) (1) (1).png" alt="" width="375"><figcaption></figcaption></figure>
+<figure><img src="../.gitbook/assets/image (6).png" alt="" width="375"><figcaption></figcaption></figure>
 
 安装驱动：
 
-<figure><img src="../.gitbook/assets/image (4).png" alt="" width="375"><figcaption></figcaption></figure>
+<figure><img src="../.gitbook/assets/image (9).png" alt="" width="375"><figcaption></figcaption></figure>
 
 检测不到 COM 可能有两个原因，一个是驱动未安装（安装后需重启、其他设备、隐藏设备、安装旧版本等方法均不起作用），另一个是物理电路连接不稳定
 
@@ -331,7 +331,7 @@ Ariel Futoransky，deattack.c，整数溢出导致越界写
 
 上古时代的计算机程序 C 占一大半，写 C 是一种浪漫。收获：增添了**历史**的视角去看计算机，不管是语言还是库的实现，在不同历史阶段是不同的
 
-<figure><img src="../.gitbook/assets/image (5).png" alt=""><figcaption></figcaption></figure>
+<figure><img src="../.gitbook/assets/image (10).png" alt=""><figcaption></figcaption></figure>
 
 #### Lab 2
 

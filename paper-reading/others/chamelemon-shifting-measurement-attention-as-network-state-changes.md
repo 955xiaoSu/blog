@@ -22,7 +22,7 @@ Network measurement 的目标是支持更多任务并以更少的内存实现更
 
 ChameleMon 的关键设计是通过动态的两个维度，实现随着网络状态的变化而转移测量注意力：1）在两种任务之间动态分配内存； 2）动态监控重要流量。为了实现关键设计，该论文提出了一项技术：利用费马小定理设计灵活的数据结构——**FermatSketch**。 FermatSketch 具有可除性、加法性和减法性，支持以上两种测量任务。 ChameleMon 的 workflow 如下：
 
-<figure><img src="../../.gitbook/assets/image (25).png" alt=""><figcaption></figcaption></figure>
+<figure><img src="../../.gitbook/assets/image (78).png" alt=""><figcaption></figcaption></figure>
 
 #### Step 1: Capture flow-level statistics
 
@@ -50,9 +50,9 @@ UpStream 统计进入网络的 flow，DownStream 统计离开网络的 flow。
 
 实验结果能够证明 ChameleMon 达到了其所描述的效果：
 
-<figure><img src="../../.gitbook/assets/image (26).png" alt=""><figcaption></figcaption></figure>
+<figure><img src="../../.gitbook/assets/image (79).png" alt=""><figcaption></figcaption></figure>
 
-<figure><img src="../../.gitbook/assets/image (27).png" alt=""><figcaption></figcaption></figure>
+<figure><img src="../../.gitbook/assets/image (80).png" alt=""><figcaption></figcaption></figure>
 
 美中不足的是，该论文在整体排版上不够美观，page5-8 没有任何图表，EVALUATION 部分草草收尾，附录部分又占比过大，不免令读者怀疑作者是否存在写作仓促的情况。
 

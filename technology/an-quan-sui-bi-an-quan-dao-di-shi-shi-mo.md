@@ -47,7 +47,7 @@ description: >-
 
 言归正传，回到密码学理论本身。无论是古典密码学，还是现代密码学，基本的加密模式都是**分组加密**（流密码可以视为分组长度为 1 的分组加密）。分组加密最本质的要求是 Claude Shannon 提出的**扩散（Diffusion）和混乱（Confusion）**，它们分别基于换位和替换操作实现。换位和替换即常说的的 S-box(Substitution) 和 P-box(Permutation)。S-box 将输入的数据块映射为另一个数据块，例如将字母"A"替换为"X"。P-box 则是将输入的数据块按照预定的规则重新排列，例如将字符串"ABCD"重排为"CDAB"。运用 S-box 和 P-box 的示例比比皆是，例如耳熟能详的 Caesar cipher 和 Vigenere cipher。
 
-<figure><img src="../.gitbook/assets/image (48).png" alt=""><figcaption><p>Caesar cipher</p></figcaption></figure>
+<figure><img src="../.gitbook/assets/image (101).png" alt=""><figcaption><p>Caesar cipher</p></figcaption></figure>
 
 <figure><img src="https://image.3001.net/images/20240516/1715841292_6645a90c4b05c00aa6405.png!small" alt="" width="375"><figcaption><p>Vigenere cipher</p></figcaption></figure>
 

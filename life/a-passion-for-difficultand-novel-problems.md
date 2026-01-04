@@ -1,4 +1,4 @@
-# A passion for difficultand novel problems
+# A passion for difficult and novel problems
 
 **Thanks for Professor Xiao**
 
@@ -10,4 +10,4 @@ OS, Computer Networking, CSAPP in this semester, let's go!!!
 
 **"Education is not filling the bucker of water but lighting a fire!"** And then we have the power to make great achievements.
 
-\
+<br>

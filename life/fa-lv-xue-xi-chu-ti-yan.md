@@ -18,9 +18,9 @@ description: 本学期笔者出于培养自身法律观念的目的，选修了�
 
 法律纷繁复杂，本 blog 作为一个记录性的文章，只想以《劳动法》、《西方法律思想史》的课程脉络作为一个切入点，分享笔者的学习体会，既不力求也无能力对法律进行一个全面系统的介绍，下文如有错误，恳请读者批评指正。（獬豸和正义女神分别是中西方法律形象的代表，图片源自 [Wikipedia](https://zh.wikipedia.org/wiki/%E6%B3%95%E5%BE%8B)）
 
-<figure><img src="../.gitbook/assets/image (6).png" alt=""><figcaption><p>獬豸</p></figcaption></figure>
+<figure><img src="../.gitbook/assets/image (11).png" alt=""><figcaption><p>獬豸</p></figcaption></figure>
 
-<figure><img src="../.gitbook/assets/image (1) (1) (1) (1) (1).png" alt=""><figcaption><p>正义女神</p></figcaption></figure>
+<figure><img src="../.gitbook/assets/image (12).png" alt=""><figcaption><p>正义女神</p></figcaption></figure>
 
 ## 劳动法
 
