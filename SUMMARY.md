@@ -27,6 +27,7 @@
 
 ## Life
 
+* [上班随想](life/shang-ban-sui-xiang.md)
 * [年轻人的第一次租房](life/nian-qing-ren-de-di-yi-ci-zu-fang.md)
 * [大学回忆录](life/da-xue-hui-yi-lu.md)
 * [一个悲观de乐观主义者的独白](life/yi-ge-bei-guan-de-le-guan-zhu-yi-zhe-de-du-bai.md)
