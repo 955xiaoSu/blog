@@ -27,6 +27,7 @@
 
 ## Life
 
+* [上班随想第二集](life/shang-ban-sui-xiang-di-er-ji.md)
 * [上班随想](life/shang-ban-sui-xiang.md)
 * [年轻人的第一次租房](life/nian-qing-ren-de-di-yi-ci-zu-fang.md)
 * [大学回忆录](life/da-xue-hui-yi-lu.md)
