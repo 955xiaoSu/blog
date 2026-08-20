@@ -28,7 +28,7 @@ description: >-
 
 仿真过程中，难免与逆向打交道，因此逆向工具是不可或缺的。逆向工具推荐安装 ghidra 和 IDA Pro，关于这两个工具的安装网上有非常详细的教程，不再赘述。以下分享几点使用 ghidra 的 tips：
 
-![ghidra](<../.gitbook/assets/0 (3).png>)
+<img src="../.gitbook/assets/0 (3).png" alt="ghidra" width="375">
 
 第一手资料应参考：
 
@@ -85,7 +85,7 @@ description: >-
 
 从 CWE-798 获取一个漏洞利用示例 CVE-2022-29953，并在 cve.org 中检索，获知受漏洞影响的厂商之一是 Bently Nevada，其产品系列是 3700，并得到一个参考链接。
 
-![](<../.gitbook/assets/7 (3).png>)
+<img src="../.gitbook/assets/7 (3).png" alt="" width="375">
 
 从链接中，我们可以获取漏洞影响的具体版本号。
 
@@ -93,7 +93,7 @@ description: >-
 
 尝试从官网 support 获取 support，但是需要登录。
 
-![](<../.gitbook/assets/9 (2).png>)
+<img src="../.gitbook/assets/9 (2).png" alt="" width="368">
 
 尝试从 github.com / google 获取固件信息，但 failed。此时可以尝试去论坛再去搜集一波信息，此处不展开。
 
@@ -199,7 +199,7 @@ ROPgadget --binary ./libuClibc-0.9.33.3-git.so --only "mov|pop" | grep "pc" | gr
 
 要注意的一点是如果遇到 \x00，要想明白如何处理截断的问题
 
-![](../.gitbook/assets/4.png)
+<img src="../.gitbook/assets/4.png" alt="" width="375">
 
 计算 padding 的长度：
 
@@ -251,9 +251,9 @@ Boofuzz 实例：复现的背景是CVE-2018-5767 是 TENDA-AC15 型号路由器�
 
 在没有快捷键的情况下，通过如下方式查找常量字符串。看反汇编是在 “IDA View-A” window。“IDA View-A” 有图形视图和文本视图，在空白处右键可进行视图模式的切换。
 
-![](<../.gitbook/assets/2 (1).png>)
+<img src="../.gitbook/assets/2 (1).png" alt="" width="375">
 
-![](<../.gitbook/assets/3 (1).png>)
+<img src="../.gitbook/assets/3 (1).png" alt="" width="209">
 
 用 qemu-arm-static 启动 httpd 发现卡死，通过字符串常量的交叉引用定位到函数
 
@@ -261,11 +261,11 @@ Boofuzz 实例：复现的背景是CVE-2018-5767 是 TENDA-AC15 型号路由器�
 
 为了 patch 分支，尝试安装 Keypatch 未果（需安装 idc module 遇到了 python 版本问题）；尝试安装另一款插件 Patching，但 IDA Pro版本不符合要求；尝试在机器码层面 patch 分支（未弄懂 arm 指令汇编未果）。
 
-![](<../.gitbook/assets/5 (1).png>)
+<img src="../.gitbook/assets/5 (1).png" alt="" width="375">
 
 切换到 ghidra 下进行尝试，ghidra 右键“Patch Instruction”可直接修改！
 
-![](<../.gitbook/assets/6 (1).png>)
+<img src="../.gitbook/assets/6 (1).png" alt="" width="375">
 
 再次启动仍然报错，回查 n 处，发现需要 br0 网卡，自行创建 br0 网卡：
 
@@ -274,7 +274,7 @@ sudo tunctl -t br0
 sudo ifconfig br0 192.168.2.3/24
 ```
 
-![](<../.gitbook/assets/7 (1).png>)
+<img src="../.gitbook/assets/7 (1).png" alt="" width="328">
 
 执行 cp -rf ./webroot\_ro/\* ./webroot/，通过 qemu 模拟，最后借助 browser 访问的方式确认启动成功。
 
@@ -292,9 +292,9 @@ sudo ifconfig br0 192.168.2.3/24
 
 利用 poc 触发 exception：
 
-![](../.gitbook/assets/12.png)
+<img src="../.gitbook/assets/12.png" alt="" width="375">
 
-![](../.gitbook/assets/13.png)
+<img src="../.gitbook/assets/13.png" alt="" width="375">
 
 ### CVE-2023-20073
 
@@ -348,7 +348,7 @@ generate_default_cert
 
 用 browser 访问对应 ip 地址，即可访问到对应的 login html
 
-![](../.gitbook/assets/14.png)
+<img src="../.gitbook/assets/14.png" alt="" width="375">
 
 ### CVE-2023-46574
 
@@ -375,7 +375,7 @@ sudo mkdir -p /iotconfig/debootstrap/mipsel # 注意要放置在根目录，而�
 debootstrap --arch=mipsel bookworm /iotconfig/debootstrap/mipsel https://mirrors.aliyun.com/debian
 ```
 
-![](../.gitbook/assets/17.png)
+<img src="../.gitbook/assets/17.png" alt="" width="375">
 
 接下来配置 schroot：sudo vim /etc/schroot/chroot.d/mipsel.conf
 
@@ -428,13 +428,13 @@ curl http://127.0.0.1/cgi-bin/cstecgi.cgi -b "SESSION_ID=<YOUR_SESSION_ID>" -X P
 
 尝试直接用 binwalk 解包，解出来一堆 .zip && .7z，解包失败。（binwalk 记得加 -r 参数，自动 delete carved file，节省空间，避免 archlinux 爆炸）
 
-![](<../.gitbook/assets/0 (2).png>)
+<img src="../.gitbook/assets/0 (2).png" alt="" width="375">
 
 参考文章的 bypass 思路是找 **\*.ri**，由于.ri文件通常用于恢复损坏的固件，它可能包含完整的系统映像，所以尝试分析 .ri 文件（攻击面的知识又增加了）。依据是来自官方 pdf 中对 .ri 文件功能的介绍 && Appendix3 Firmware Recovery（强调了别在更新期间做一些骚操作）。
 
-![](<../.gitbook/assets/1 (2).png>)
+<img src="../.gitbook/assets/1 (2).png" alt="" width="375">
 
-![](<../.gitbook/assets/2 (2).png>)
+<img src="../.gitbook/assets/2 (2).png" alt="" width="375">
 
 承上，继续解包 \*.ri，而后继续解包 240 文件（若解包 \*.ri 后得到的仅有 240.7z，那么对该文件解压缩即可）。观察发现存在 zyinit 文件，用 file 命令查看其文件属性。
 
