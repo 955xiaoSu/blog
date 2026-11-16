@@ -31,7 +31,7 @@ layout:
 
 **Hi there,**
 
-HNU ~~在读本科生~~ 2025届校友 ➡️ HWer（base 东莞）
+HNU ~~在读本科生~~ 2025届校友 ➡️ IC Engineer（base 上海）
 
 信仰是 _**Living for fun**,_（高难度 || 未尝试）的事都很有趣
 
